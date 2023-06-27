@@ -11,6 +11,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text, force_str
+from problem.models import Problem
 
 from .models import Stats, User
 
@@ -161,10 +162,22 @@ def stats(request):
             return JsonResponse({'status': 'Can only GET to this endpoint'}, status=400)
 
         if request.user.is_authenticated:
-            print("token authenticated")
             user = request.user
-            print(user)
             statistics, created = Stats.objects.get_or_create(user=user)
+            problems = Problem.objects.all()
+            problemcodes = [problem.problemcode for problem in problems]
+            for problemcode in problemcodes:
+                statistics.add_unsolved(problemcode)
+            statistics.save()
+            for problemcode in statistics.solved:
+                if problemcode in statistics.attempted:
+                    statistics.remove_attempted(problemcode)
+                if problemcode in statistics.unsolved:
+                    statistics.remove_unsolved(problemcode)
+            for problemcode in statistics.attempted:
+                if problemcode in statistics.unsolved:
+                    statistics.remove_unsolved(problemcode)
+            statistics.save()
             return JsonResponse((model_to_dict(statistics)), status=200)
 
         else:

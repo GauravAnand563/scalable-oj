@@ -1,7 +1,12 @@
-2_PROB7_code.cpp: In function ‘int main()’:
-2_PROB7_code.cpp:5:12: error: expected ‘}’ at end of input
-    5 |   return 0;
-      |            ^
-2_PROB7_code.cpp:3:11: note: to match this ‘{’
-    3 | int main(){
-      |           ^
+ ----------------- TestcaseIndex=0 ----------------- 
+ :STDOUT:  
+1 2 3 4 5 
+:STDERR:
+
+
+ ----------------- TestcaseIndex=1 ----------------- 
+ :STDOUT:  
+1 2 3 4 5 6 
+:STDERR:
+
+

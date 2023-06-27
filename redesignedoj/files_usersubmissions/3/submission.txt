@@ -1,0 +1,7 @@
+2_PROB7_code.cpp: In function ‘int main()’:
+2_PROB7_code.cpp:7:20: error: expected ‘;’ before ‘return’
+    7 |    cout << i << " "
+      |                    ^
+      |                    ;
+    8 |   return 0;
+      |   ~~~~~~            

@@ -1,6 +1,16 @@
- ----------------- TestcaseIndex=0 ----------------- 
- :STDOUT:  
-WR
-:STDERR:
-
-
+2_PROB7_code.cpp:2:20: error: expected ‘;’ before ‘int’
+    2 | using namespace std
+      |                    ^
+      |                    ;
+    3 | int main(){
+      | ~~~                 
+2_PROB7_code.cpp: In function ‘int main()’:
+2_PROB7_code.cpp:6:9: error: expected ‘;’ before ‘for’
+    6 | cin >> n
+      |         ^
+      |         ;
+    7 | for(int i = 1; i <= n; i++)
+      | ~~~      
+2_PROB7_code.cpp:7:16: error: ‘i’ was not declared in this scope
+    7 | for(int i = 1; i <= n; i++)
+      |                ^

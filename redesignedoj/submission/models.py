@@ -29,39 +29,27 @@ def update_statistics(sender, instance, created, **kwargs):
     statistics, created = Stats.objects.get_or_create(user=user)
 
     if created:
-        # List all the problem objects and make a list of their problem codes
-        problems = Problem.objects.all()
-        problemcodes = [problem.problemcode for problem in problems]
-
-        # Add the problem codes to the unsolved list
-        for problemcode in problemcodes:
-            statistics.add_to_array('unsolved', problemcode)
-
         if instance.verdict == "ACCEPTED":
-            statistics.add_to_array('solved', instance.problem.problemcode)
+            statistics.add_solved(instance.problem.problemcode)
         else:
-            statistics.add_to_array('attempted', instance.problem.problemcode)
+            statistics.add_attempted(instance.problem.problemcode)
 
-        # Remove the problem code from the unsolved list
-        statistics.remove_from_array('unsolved', instance.problem.problemcode)
+        statistics.remove_unsolved(instance.problem.problemcode)
 
         statistics.save()
     else:
         if instance.verdict == "ACCEPTED":
-            statistics.add_to_array('solved', instance.problem.problemcode)
+            statistics.add_solved(instance.problem.problemcode)
         else:
-            # Go through all the submissions and check if the verdict for this problem is accepted or not
             submissions = Submission.objects.filter(
                 user=user, problem=instance.problem)
             verdicts = [submission.verdict for submission in submissions]
 
             if "ACCEPTED" in verdicts:
-                statistics.add_to_array('solved', instance.problem.problemcode)
+                statistics.add_solved(instance.problem.problemcode)
             else:
-                statistics.add_to_array(
-                    'attempted', instance.problem.problemcode)
+                statistics.add_attempted(instance.problem.problemcode)
 
-        # Remove the problem code from the unsolved list
-        statistics.remove_from_array('unsolved', instance.problem.problemcode)
+        statistics.remove_unsolved(instance.problem.problemcode)
 
         statistics.save()
