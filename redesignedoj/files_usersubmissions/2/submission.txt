@@ -1,6 +1,12 @@
-2_TWOSUM_code.cpp:2:20: error: expected ‘;’ before ‘int’
-    2 | using namespace std
-      |                    ^
-      |                    ;
-    3 | int main(){
-      | ~~~                 
+ ----------------- TestcaseIndex=0 ----------------- 
+ :STDOUT:  
+1 2 3 4 5 
+:STDERR:
+
+
+ ----------------- TestcaseIndex=1 ----------------- 
+ :STDOUT:  
+1 2 3 4 5 6 
+:STDERR:
+
+

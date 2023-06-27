@@ -1,4 +1,4 @@
-#!/home/gauravanand563/Desktop/untitled folder 3/scalable-oj/redesignedoj/myenv/bin/python3
+#!/home/gauravanand563/Desktop/untitled folder 3/scalable-oj/redesignedoj/myenv/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
