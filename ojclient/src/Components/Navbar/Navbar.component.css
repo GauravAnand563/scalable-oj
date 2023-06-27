@@ -1,0 +1,84 @@
+
+
+.image{
+    height:40px;
+    margin-right:10px;
+    /* width:80px; */
+}
+
+.logoAndText{
+    display:flex;
+    width:197px;
+    display:flex;
+    /* justify-content:space-around; */
+    align-items:center;
+}
+
+.navBar{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:white;
+    color:grey;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:5px;
+    box-sizing:border-box;
+    border-color:black;
+    height:50px;
+    width:99%;
+    /* border: 1px solid black; */
+    border-radius:5px;
+    margin-left:10px;
+   
+}
+.login{
+    color:grey;
+}
+
+.link{
+    color:grey;
+}
+
+.logoText{
+    color:black;
+}
+
+.dataCard{
+    box-sizing: border-box;
+    height:20px;
+    /* width:100px; */
+    /* background-color:purple; */
+    color:yellow;
+    border-radius: 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:10px;
+}
+
+.container{
+    display:flex;
+    width:20%;
+    align-items:center;
+}
+
+.text{
+    color:grey;
+}
+
+.logoAndText a:hover
+{
+background-color:grey;
+color:white;
+border-radius:5px;
+
+}
+
+.container a:hover{
+    background-color:pink;
+color:white;
+border-radius: 5px;
+padding:2px;
+}

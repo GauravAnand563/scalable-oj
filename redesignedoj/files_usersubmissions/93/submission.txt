@@ -1,0 +1,11 @@
+19_WEIRDALGORITHM_code.cpp:6:13: warning: multi-character character constant [-Wmultichar]
+ console.log('hi')
+             ^~~~
+19_WEIRDALGORITHM_code.cpp: In function ‘int main()’:
+19_WEIRDALGORITHM_code.cpp:6:1: error: ‘console’ was not declared in this scope
+ console.log('hi')
+ ^~~~~~~
+19_WEIRDALGORITHM_code.cpp:6:1: note: suggested alternative: ‘cosl’
+ console.log('hi')
+ ^~~~~~~
+ cosl

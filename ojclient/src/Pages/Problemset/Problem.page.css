@@ -1,0 +1,29 @@
+.problemset-base{
+    padding-top: 20px;
+}
+.problemset-base .problemset-tab{
+    width: 100%;
+    display: flex;
+
+}
+.problemset-base .problemset-tab > div{
+    margin-left: 2px;
+    margin-right: 2px;
+    padding:  6px;
+    border-radius: 2px;
+}
+.problemset-base .problemset-tab > div > a{
+
+    text-decoration: none;
+    color:#009;
+}
+.problemset-base .problemset-tab > div:hover{
+    background-color:  #ebebeb;;
+}
+
+.problemsetpage-table{
+    width: 100%;
+}
+.problemsetpage-table tr{
+    cursor: pointer;
+}

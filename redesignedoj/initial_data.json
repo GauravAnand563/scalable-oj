@@ -1,0 +1,203 @@
+[{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "temp@123",
+    "is_superuser": true,
+    "username": "Therock",
+    "first_name": "Gaurav",
+    "last_name": "Anand",
+    "email": "gauravanand563@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{ "model": "problem.tag", "pk": 1, "fields": { "tagname": "loop" } },
+{ "model": "problem.tag", "pk": 2, "fields": { "tagname": "dp" } },
+{ "model": "problem.tag", "pk": 3, "fields": { "tagname": "array" } },
+{ "model": "problem.tag", "pk": 4, "fields": { "tagname": "string" } },
+{ "model": "problem.tag", "pk": 5, "fields": { "tagname": "greedy" } },
+{ "model": "problem.tag", "pk": 6, "fields": { "tagname": "graph" } },
+{ "model": "problem.tag", "pk": 7, "fields": { "tagname": "graph" } },
+{
+  "model": "problem.problem",
+  "pk": 1,
+  "fields": {
+    "author": 1,
+    "problemcode": "PROB7",
+    "title": "Test7",
+    "description": "You will be given 'n', and print all the numbers from 1 to n (included)",
+    "difficulty": "EASY",
+    "score": 0,
+    "tags": [3]
+  }
+},
+{
+  "model": "problem.problem",
+  "pk": 2,
+  "fields": {
+    "author": 1,
+    "problemcode": "WEIRDALGORITHM",
+    "title": "Weird Algorithm",
+    "description": "Consider an algorithm that takes as input a positive integer n. If n is even, the algorithm divides it by two, and if n is odd, the algorithm multiplies it by three and adds one. The algorithm repeats this, until n is one. For example, the sequence for n=3 is as follows:\r\n3→10→5→16→8→4→2→1\r\n\r\nYour task is to simulate the execution of the algorithm for a given value of n.\r\n\r\nInput\r\n\r\nThe only input line contains an integer n.\r\n\r\nOutput\r\n\r\nPrint a line that contains all values of n during the algorithm.\r\n\r\nConstraints\r\n1≤n≤106\r\nExample\r\n\r\nInput:\r\n3\r\n\r\nOutput:\r\n3 10 5 16 8 4 2 1",
+    "difficulty": "EASY",
+    "score": 1,
+    "tags": [1]
+  }
+},
+{
+  "model": "problem.problem",
+  "pk": 4,
+  "fields": {
+    "author": 1,
+    "problemcode": "BUILDROADS",
+    "title": "Building Roads",
+    "description": "Byteland has n cities, and m roads between them. The goal is to construct new roads so that there is a route between any two cities.\r\n\r\nYour task is to find out the minimum number of roads required, and also determine which roads should be built.\r\n\r\nInput\r\n\r\nThe first input line has two integers n and m: the number of cities and roads. The cities are numbered 1,2,…,n.\r\n\r\nAfter that, there are m lines describing the roads. Each line has two integers a and b: there is a road between those cities.\r\n\r\nA road always connects two different cities, and there is at most one road between any two cities.\r\n\r\nOutput\r\n\r\nFirst print an integer k: the number of required roads.\r\n\r\nThen, print k lines that describe the new roads. You can print any valid solution.\r\n\r\nConstraints\r\n1≤n≤105\r\n1≤m≤2⋅105\r\n1≤a,b≤n\r\nExample\r\n\r\nInput:\r\n4 2\r\n1 2\r\n3 4\r\n\r\nOutput:\r\n1\r\n2 3",
+    "difficulty": "MEDIUM",
+    "score": 4,
+    "tags": [7]
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 1,
+  "fields": {
+    "title": "PROB7_testcase_0",
+    "input_path": "files_testcases/PROB7/0/input.txt",
+    "output_path": "files_testcases/PROB7/0/output.txt",
+    "problem": 1
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 2,
+  "fields": {
+    "title": "PROB7_testcase_1",
+    "input_path": "files_testcases/PROB7/1/input.txt",
+    "output_path": "files_testcases/PROB7/1/output.txt",
+    "problem": 1
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 3,
+  "fields": {
+    "title": "BUILDROADS_testcase_0",
+    "input_path": "files_testcases/BUILDROADS/0/input.txt",
+    "output_path": "files_testcases/BUILDROADS/0/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 4,
+  "fields": {
+    "title": "BUILDROADS_testcase_1",
+    "input_path": "files_testcases/BUILDROADS/1/input.txt",
+    "output_path": "files_testcases/BUILDROADS/1/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 5,
+  "fields": {
+    "title": "BUILDROADS_testcase_2",
+    "input_path": "files_testcases/BUILDROADS/2/input.txt",
+    "output_path": "files_testcases/BUILDROADS/2/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 6,
+  "fields": {
+    "title": "BUILDROADS_testcase_3",
+    "input_path": "files_testcases/BUILDROADS/3/input.txt",
+    "output_path": "files_testcases/BUILDROADS/3/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 7,
+  "fields": {
+    "title": "BUILDROADS_testcase_4",
+    "input_path": "files_testcases/BUILDROADS/4/input.txt",
+    "output_path": "files_testcases/BUILDROADS/4/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 8,
+  "fields": {
+    "title": "BUILDROADS_testcase_5",
+    "input_path": "files_testcases/BUILDROADS/5/input.txt",
+    "output_path": "files_testcases/BUILDROADS/5/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 9,
+  "fields": {
+    "title": "BUILDROADS_testcase_6",
+    "input_path": "files_testcases/BUILDROADS/6/input.txt",
+    "output_path": "files_testcases/BUILDROADS/6/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 10,
+  "fields": {
+    "title": "BUILDROADS_testcase_7",
+    "input_path": "files_testcases/BUILDROADS/7/input.txt",
+    "output_path": "files_testcases/BUILDROADS/7/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 11,
+  "fields": {
+    "title": "BUILDROADS_testcase_8",
+    "input_path": "files_testcases/BUILDROADS/8/input.txt",
+    "output_path": "files_testcases/BUILDROADS/8/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 12,
+  "fields": {
+    "title": "BUILDROADS_testcase_9",
+    "input_path": "files_testcases/BUILDROADS/9/input.txt",
+    "output_path": "files_testcases/BUILDROADS/9/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 13,
+  "fields": {
+    "title": "BUILDROADS_testcase_10",
+    "input_path": "files_testcases/BUILDROADS/10/input.txt",
+    "output_path": "files_testcases/BUILDROADS/10/output.txt",
+    "problem": 4
+  }
+},
+{
+  "model": "problem.testcase",
+  "pk": 14,
+  "fields": {
+    "title": "BUILDROADS_testcase_11",
+    "input_path": "files_testcases/BUILDROADS/11/input.txt",
+    "output_path": "files_testcases/BUILDROADS/11/output.txt",
+    "problem": 4
+  }
+}
+]

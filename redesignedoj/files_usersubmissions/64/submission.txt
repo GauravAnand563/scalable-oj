@@ -1,0 +1,4 @@
+5_BUILDROADS_code.cpp: In function ‘int main()’:
+5_BUILDROADS_code.cpp:48:47: error: ‘s’ was not declared in this scope
+   48 |         cout<<res[i-1+1]<<" "<<res[i+1]<<"\n";s
+      |                                               ^

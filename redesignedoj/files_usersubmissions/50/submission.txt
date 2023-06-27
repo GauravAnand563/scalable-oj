@@ -1,0 +1,6 @@
+6_PROB7_code.cpp:2:20: error: expected ‘;’ before ‘int’
+    2 | using namespace std
+      |                    ^
+      |                    ;
+    3 | int main(){
+      | ~~~                 
