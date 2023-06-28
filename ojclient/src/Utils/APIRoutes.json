@@ -3,6 +3,7 @@
   "APIS": {
     "REGISTER_USER": "/users/register/",
     "LOGIN_USER": "/users/login/",
+    "ACTIVATE_USER": "/users/activate/<str:uidb64>/<str:token>",
     "GET_ALL_PROBLEMS": "/problems/getAllProblems",
     "GET_PROBLEMS_BY_PAGE": "/problems/getAllProblems/",
     "GET_PROBLEM_BY_ID": "/problems/getProblemById/",

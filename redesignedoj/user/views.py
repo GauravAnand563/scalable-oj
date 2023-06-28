@@ -34,22 +34,29 @@ def register(request):
             print(newuser)
 
             uidb64 = urlsafe_base64_encode(force_bytes(newuser.pk))
-            message = {
-                'user': {'username': jsonData["username"]},
-                'domain': 'pushpendrahpx.me',
-                'uid': uidb64,
-                'token': 'http://localhost:8000/users/activate/'+uidb64+'/'+account_activation_token.make_token(newuser),
-            }
+            # message = {
+            #     'user': {'username': jsonData["username"]},
+            #     'domain': 'pushpendrahpx.me',
+            #     'uid': uidb64,
+            #     'token': 'http://localhost:8000/users/activate/'+uidb64+'/'+account_activation_token.make_token(newuser),
+            # }
 
-            ourUserModel.token = message["token"]
+            message = "Hi " + jsonData["firstname"] + " " + jsonData["lastname"] + ",\n\n" + "Please click on the link below to verify your account.\n\n" + \
+                "Alternatively, you can copy and paste the link in your browser's address bar.\n\n" + \
+                'http://localhost:8000/users/activate/'+uidb64 + \
+                '/'+account_activation_token.make_token(newuser) + "\n\n"
 
-            mail_subject = 'Account Verification of ' + \
-                jsonData["email"] + '- Redesigned OJ'
+            ourUserModel.token = 'http://localhost:8000/users/activate/' + \
+                uidb64+'/'+account_activation_token.make_token(newuser)
+
+            mail_subject = 'Scalable OJ - ' + \
+                str.title(jsonData["firstname"]) + ' Account Verification'
 
             to_email = jsonData["email"]
             to_name = jsonData["firstname"] + " " + jsonData["lastname"]
-            emailObj = Email(to_email=to_email, subject=mail_subject, text_content=str(
-                message), html_content='', email_group='Account Verification', content_type=False, to_name=to_name)
+            print(message)
+            emailObj = Email(to_email=to_email, subject=mail_subject, text_content=message,
+                             token_link=ourUserModel.token, email_group='Account Verification', content_type=False, to_name=to_name)
             emailresponse = emailObj.send_email()
             print(emailresponse)
 
