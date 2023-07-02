@@ -1,0 +1,98 @@
+.solveContainer{
+    /* background-color:grey; */
+    width:65%;
+    margin-left:20px;
+    padding:10px;
+}
+
+.chooseAFile{
+    height:40px;
+    width:140px;
+    background-color:#e8e8e8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:alias;
+}
+.noFileSelected{
+   height:40px;
+   width:140px;
+    background-color:#e5f6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.labelContainer{
+width:400px;
+}
+
+.buttonsContainer{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+.submissionButton{
+    background-color:#1da1f2;
+    color:white;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:150px;
+    height:40px;
+}
+
+.selectLanguage{
+    width:150px;
+    height:36px;
+    background-color:#e8e8e8;
+    margin-right:10px;
+    border:1px white;
+    border-radius:5px;
+}
+
+.submitButton{
+    width:100px;
+    height:30px;
+    margin-top:5px;
+    background-color:#8bc96e;
+    border-radius:5px;
+    border:1px #8bc96e;
+    color:white;
+  
+
+    
+}
+
+.submitButton:hover{
+    background-color:grey;
+    color:#8bc96e;
+    box-sizing: border-box;
+    border:1px black;
+}
+
+.formClass{
+   margin-top:20px;
+    height:650px;
+}
+.textarea{
+    height:610px;
+    width:100%;
+    font-size: 20px;
+    padding:20px;
+}
+
+.submitButtonContainer{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.allButtons{
+    display:flex;
+    justify-content:space-between;
+}
+
+.langAndSubmit{
+    display:flex;
+}
