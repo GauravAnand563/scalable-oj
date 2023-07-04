@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 // import "./Navbar.component.css";
-import logo from "./Scalable.png";
-import SearchBar from "./SearchBar/SearchBar";
+import axios from "axios";
+import { HiLogout } from "react-icons/hi";
+import { MdVerified } from "react-icons/md";
+import { useLocation, useNavigate } from "react-router-dom";
+import APIRoutes from "../../Utils/APIRoutes.json";
 import ThemeComponent from "./Theme.component";
 
 function NavbarComponent() {
@@ -13,6 +15,58 @@ function NavbarComponent() {
     { to: "/about", content: "About" },
     { to: "/createproblem", content: "Create Problem" },
   ];
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const loginState = location.state && location.state.login_state;
+
+  useEffect(() => {
+    if (loginState === "success") {
+      setTimeout(() => {
+        navigate("/", { replace: true, state: undefined });
+      }, 2000);
+    }
+  }, [loginState, navigate]);
+
+  const [userProfile, setUserProfile] = useState({
+    username: "",
+    is_superuser: false,
+  });
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+
+  useEffect(() => {
+    axios
+      .get(APIRoutes.SERVER_HOST + APIRoutes.APIS.GET_USER, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        setUserProfile(response.data);
+        setIsLoggedIn(true); // Update login status
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [loginState]); // Add isLoggedIn as a dependency
+
+  const handleLogout = () => {
+    axios
+      .post(
+        APIRoutes.SERVER_HOST + APIRoutes.APIS.LOGOUT_USER,
+        {
+          cookie: "",
+        },
+        {
+          withCredentials: true,
+        }
+      )
+      .then((response) => {
+        setIsLoggedIn(false); // Update login status
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="navbar h-16 py-9 pr-9">
@@ -40,11 +94,38 @@ function NavbarComponent() {
       </div>
       <div className="navbar-end">
         <ThemeComponent />
-        <a className="btn" href="/login">
-          {/* <Link className="link no-underline" to="/login"> */}
+        {userProfile.username ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn m-1">
+              {userProfile.username}
+              {userProfile.is_superuser ? (
+                <span className="ml-2 text-green-300 text-xl">
+                  <MdVerified />
+                </span>
+              ) : (
+                <></>
+              )}
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow rounded-box w-fit"
+            >
+              <li onClick={handleLogout}>
+                <button className="btn border-white bg-red-400 text-white">
+                  Logout
+                  <span className="icon">
+                    <HiLogout />
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          // <span>{userProfile.username}</span>
+          <a className="btn" href="/login">
             Login
-          {/* </Link> */}
-        </a>
+          </a>
+        )}
       </div>
     </div>
   );

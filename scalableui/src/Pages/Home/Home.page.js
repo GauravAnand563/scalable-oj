@@ -1,18 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import PagetabComponent from "../../Components/Pagetab/Pagetab.component";
-import PagebaseMiddleware from "../../Middlewares/Pagebase/Pagebase.middleware";
-// import "./Home.page.css";
-import APIRoutes from "./../../Utils/APIRoutes.json";
-import { useState } from "react";
-import DataTable, { createTheme } from "react-data-table-component";
-// import {useEffect} from 'react'
 import axios from "axios";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
-import { Chip } from "@react-md/chip";
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from "chart.js";
+import { default as React, useEffect, useState } from "react";
+import { AiOutlineCode } from "react-icons/ai";
 import { BsFillXCircleFill } from "react-icons/bs";
-
+import { useLocation, useNavigate } from "react-router-dom";
+import PagebaseMiddleware from "../../Middlewares/Pagebase/Pagebase.middleware";
+import APIRoutes from "../../Utils/APIRoutes.json";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 let tabItemData = [
@@ -40,42 +33,72 @@ export const chartData = {
   ],
 };
 function HomePage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const loginState = location.state && location.state.login_state;
+
+  useEffect(() => {
+    if (loginState === "success") {
+      setTimeout(() => {
+        navigate("/", { replace: true, state: undefined });
+      }, 2000);
+    }
+  }, [loginState, navigate]);
+
   const [rows, setRows] = useState([]);
-  const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [selectedTag, setSelectedTag] = useState("");
   const [isTagApplied, setIsTagApplied] = useState(false);
   const [allTags] = useState([]);
+  const [problemStatus, setProblemStatus] = useState({
+    solved: [],
+    attempted: [],
+    unsolved: [],
+  });
+
   useEffect(() => {
     document.title = "Home - Scalable OJ";
   });
 
   useEffect(() => {
     axios
+      .get(APIRoutes.SERVER_HOST + APIRoutes.APIS.STATS_USER, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        setProblemStatus(response.data);
+      })
+      .catch((error) => {
+        // setProblemStatus(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
       .get(APIRoutes.SERVER_HOST + APIRoutes.APIS.GET_ALL_TAGS)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         response.data.forEach((tag) => {
           let check = 0;
           allTags.forEach((t) => {
-            if (t.value === toCamelCase(tag.tagname)) {
+            if (t.value === tag.tagname) {
               check = 1;
             }
           });
           if (check === 0)
             allTags.push({
-              value: toCamelCase(tag.tagname),
+              value: tag.tagname,
               key: tag.tagname,
             });
         });
       });
-  });
+  }, []);
 
   useEffect(() => {
     axios
       .get(APIRoutes.SERVER_HOST + APIRoutes.APIS.GET_ALL_PROBLEMS)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setRows(response.data);
         setFilteredData(response.data);
       })
@@ -84,50 +107,19 @@ function HomePage() {
       });
   }, []);
 
-  useEffect(() => {
-    if (search != "") {
-      const result = rows?.filter((r) => {
-        return r?.title?.toLowerCase().match(search.toLowerCase());
-      });
-      setFilteredData(result);
-    } else {
-      setFilteredData(rows);
-    }
-  }, [search]);
-
-  // console.log(rows)
-  const columns = [
-    { name: "Problem Id", selector: (row) => row.id, sortable: true },
-    {
-      name: "title",
-      selector: (row) => row.title,
-      wrap: true,
-      sortable: true,
-    },
-    {
-      name: "Problem Code",
-      selector: (row) => row.problemcode,
-      wrap: true,
-    },
-    {
-      name: "Difficulty",
-      selector: (row) => row.difficulty,
-      wrap: true,
-      sortable: true,
-    },
-    {
-      name: "Action",
-      cell: (row) => (
-        <Link className="buttonClass" to={"/problem/" + row.id}>
-          {" "}
-          Solve{" "}
-        </Link>
-      ),
-    },
-  ];
+  // useEffect(() => {
+  //   if (search != "") {
+  //     const result = rows?.filter((r) => {
+  //       return r?.title?.toLowerCase().match(search.toLowerCase());
+  //     });
+  //     setFilteredData(result);
+  //   } else {
+  //     setFilteredData(rows);
+  //   }
+  // }, [search]);
 
   const onChipClick = (props) => {
-    console.log(props);
+    // console.log(props);
 
     let chipFilterData = [];
     rows.forEach((row) => {
@@ -148,9 +140,44 @@ function HomePage() {
     // setFilteredData(chipFilterData)
   };
 
+  const classRow = (row, ps) => {
+    if (ps && ps.solved && ps.attempted) {
+      return ps.solved.includes(row.problemcode)
+        ? "bg-green-200 text-black"
+        : ps.attempted.includes(row.problemcode)
+        ? "bg-red-200 text-black"
+        : "";
+    }
+    return "";
+  };
+
   return (
     <PagebaseMiddleware>
       <div className="homePageContainer">
+        {loginState === "success" && (
+          <div className="flex flex-row mx-4 mt-2 items-center justify-start bg-emerald-400 p-4 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="stroke-current shrink-0 h-6 w-6 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <div className="flex text-black items-baseline">
+              <h3 className="font-bold mx-3 ">Login Successfull!</h3>
+              <div className="text-xs">
+                You may now start solving the problems
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="p-4 flex">
           <div className="mr-4 py-3 rounded-2xl basis-2/3">
             <div className="tabs tabs-boxed mb-2">
@@ -170,13 +197,13 @@ function HomePage() {
                   }}
                   id={tag.value}
                 >
-                  {tag.value}
+                  {toCamelCase(tag.value)}
                   {selectedTag === tag.value && (
                     <span className="ml-2 z-40">
                       <BsFillXCircleFill
                         onClick={(e) => {
                           e.stopPropagation();
-                          console.log("clicked" + tag.value);
+                          // console.log("clicked" + tag.value);
                           setFilteredData(rows);
                           setSelectedTag("");
                         }}
@@ -188,27 +215,43 @@ function HomePage() {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="table table-zebra w-full">
+              <table className="table w-full">
                 <thead>
                   <tr>
                     <th>Problem Id</th>
-                    <th>Title</th>
                     <th>Problem Code</th>
+                    <th>Title</th>
                     <th>Difficulty</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredData.map((row) => (
+                  {filteredData?.map((row) => (
                     <tr key={row.id}>
-                      <td>{row.id}</td>
-                      <td>{row.title}</td>
-                      <td>{row.problemcode}</td>
-                      <td>{row.difficulty}</td>
-                      <td>
-                        <Link className="buttonClass" to={"/problem/" + row.id}>
+                      <td className={`${classRow(row, problemStatus)}`}>
+                        {row.id}
+                      </td>
+                      <td className={`${classRow(row, problemStatus)}`}>
+                        {row.problemcode}
+                      </td>
+                      <td className={`${classRow(row, problemStatus)}`}>
+                        {row.title}
+                      </td>
+
+                      <td className={`${classRow(row, problemStatus)}`}>
+                        {row.difficulty}
+                      </td>
+                      <td className={` ${classRow(row, problemStatus)}`}>
+                        <a
+                          className="link-hover flex flex-row items-center"
+                          href={"/problem/" + row.id}
+                        >
                           Solve
-                        </Link>
+                          {
+                            // add a link icon
+                            <AiOutlineCode className="hover:text-green-500 text-xl ml-2" />
+                          }
+                        </a>
                       </td>
                     </tr>
                   ))}
@@ -217,8 +260,37 @@ function HomePage() {
             </div>
           </div>
           <div className="blogsSection basis-1/3 rounded-2xl bg-slate-400">
-            <div className="doughnutGraph">
+            {/* <div className="doughnutGraph">
               <Pie data={chartData} />
+            </div> */}
+            {/* <div className="">
+              <button className="btn" onClick={handleStatus}>
+                Problem Status
+              </button>
+              <hr />
+              {problemStatus}
+            </div> */}
+            <div>
+              <h2>Solved:</h2>
+              <ul>
+                {problemStatus?.solved?.map((problem) => (
+                  <li key={problem}>{problem}</li>
+                ))}
+              </ul>
+
+              <h2>Attempted:</h2>
+              <ul>
+                {problemStatus?.attempted?.map((problem) => (
+                  <li key={problem}>{problem}</li>
+                ))}
+              </ul>
+
+              <h2>Unsolved:</h2>
+              <ul>
+                {problemStatus?.unsolved?.map((problem) => (
+                  <li key={problem}>{problem}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

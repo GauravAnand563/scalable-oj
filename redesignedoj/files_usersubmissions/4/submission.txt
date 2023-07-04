@@ -1,7 +1,6 @@
-2_WEIRDALGORITHM_code.cpp: In function ‘int main()’:
-2_WEIRDALGORITHM_code.cpp:5:11: error: expected ‘;’ before ‘}’ token
-    5 |   return 0
-      |           ^
-      |           ;
-    6 | }
-      | ~          
+2_PROB7_code.cpp:2:20: error: expected ‘;’ before ‘int’
+    2 | using namespace std
+      |                    ^
+      |                    ;
+    3 | int main(){
+      | ~~~                 

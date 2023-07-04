@@ -1,6 +1,7 @@
- ----------------- TestcaseIndex=0 ----------------- 
- :STDOUT:  
-
-:STDERR:
-
-
+7_WEIRDALGORITHM_code.cpp:1:22: error: missing terminating > character
+    1 | #include <bits/stdc++
+      |                      ^
+7_WEIRDALGORITHM_code.cpp:1:10: fatal error: bits/stdc++: No such file or directory
+    1 | #include <bits/stdc++
+      |          ^
+compilation terminated.

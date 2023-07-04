@@ -80,7 +80,7 @@ class Email():
         }
         result = mailjet.send.create(data=data)
         self.response = result
-        print(result.json())
+        # print(result.json())
         return result
 
 

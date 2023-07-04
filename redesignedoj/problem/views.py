@@ -43,7 +43,7 @@ def create_problem(request):
         # Directory path of problem 
         testcasesPath = "files_testcases/"+str(problemcode)
 
-        print(testcasesPath)
+        # print(testcasesPath)
         if(not os.path.exists(testcasesPath)):
             os.makedirs(testcasesPath)
 
@@ -116,16 +116,16 @@ def getAllProblems(request):
     list_problems = []
     for each in problems_list:
         tagss = list(each.tags.all().values())
-        print(tagss)
+        # print(tagss)
         # tj = json.loads(tagss)
         dicteach = model_to_dict(each)
 
-        print(dicteach)
+        # print(dicteach)
         dicteach["tags"] = tagss
-        print(dicteach)
+        # print(dicteach)
         list_problems.append(dicteach)
 
-    print(list_problems)
+    # print(list_problems)
 
     # list_result = [dict(entry) for entry in problems]
     return JsonResponse(list_problems, safe=False)
@@ -142,11 +142,11 @@ def getProblemById(request,id):
 
 
     problem = Problem.objects.get(id=id)
-    print(problem)
-    print(problem)
+    # print(problem)
+    # print(problem)
 
     tagss = list(problem.tags.all().values())
-    print(tagss)
+    # print(tagss)
         # tj = json.loads(tagss)
     dicteach = model_to_dict(problem)
     dicteach["tags"] = tagss

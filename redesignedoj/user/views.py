@@ -12,6 +12,8 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text, force_str
 from problem.models import Problem
+# add login required
+from django.contrib.auth.decorators import login_required
 
 from .models import Stats, User
 
@@ -31,7 +33,7 @@ def register(request):
                 jsonData["username"], jsonData["email"], jsonData["password"], first_name=jsonData["firstname"], last_name=jsonData["lastname"], is_active=False)
             ourUserModel = User.objects.create(
                 user=newuser, rating=0, status=True, country='India', token='')
-            print(newuser)
+            # print(newuser)
 
             uidb64 = urlsafe_base64_encode(force_bytes(newuser.pk))
             # message = {
@@ -54,11 +56,11 @@ def register(request):
 
             to_email = jsonData["email"]
             to_name = jsonData["firstname"] + " " + jsonData["lastname"]
-            print(message)
+            # print(message)
             emailObj = Email(to_email=to_email, subject=mail_subject, text_content=message,
                              token_link=ourUserModel.token, email_group='Account Verification', content_type=False, to_name=to_name)
             emailresponse = emailObj.send_email()
-            print(emailresponse)
+            # print(emailresponse)
 
             return JsonResponse({'message': 'user created'}, status=200)
 
@@ -82,7 +84,7 @@ def login(request):
         username = jsonData["username"]
         password = jsonData["password"]
         user = authenticate(request, username=username, password=password)
-        print(user)
+        # print(user)
         if user is not None:
             loginuserobj = LibraryLogin(request, user)
             print(loginuserobj)
@@ -97,19 +99,22 @@ def login(request):
         else:
             # Return an 'invalid login' error message.
             ...
-            return JsonResponse({'message': 'Login Failed'})
+            return JsonResponse({'message': 'Login Failed'}, status=400)
 
     except Exception as e:
 
         return JsonResponse({'status': 'Login EXCEPTION OCCURED', 'exception': str(e)}, status=400)
 
 
-def logout(request):
+def logout_view(request):
     try:
         if (request.method != "POST"):
             return JsonResponse({'status': 'Invalid Register Method'}, status=400)
 
         if request.user.is_authenticated:
+            print(request.headers)
+            print(request.user)
+            print(request.body)
             LibraryLogout(request)
             # Do something for authenticated users.
             return JsonResponse({'message': 'logout sucessfull'}, status=200)
