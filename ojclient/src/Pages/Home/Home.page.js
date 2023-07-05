@@ -196,20 +196,9 @@ function HomePage() {
     <PagebaseMiddleware>
       <div className="homePageContainer">
         <h4 className="homePageText">Home Page</h4>
-        {/* <PagetabComponent tabItems={tabItemData} /> */}
         <hr />
-
-        {/* <ul>
-          <li>Problem set</li>
-          <li>Contests</li>
-          <li><a href="https://pushpendrahpx.github.io">Blogs</a></li>
-          <li>About</li>
-        </ul> */}
-
-        {/* <Link to="/createproblem">Create Problem</Link> */}
         <div className="blogsAndTable">
           <div className="tableContainer">
-            {/* { isTagApplied && <div> {selectedTag}</div>} */}
             <DataTable
               theme="solarized"
               id="tab"
@@ -234,29 +223,6 @@ function HomePage() {
               }
               subHeaderAlign="left"
             />
-            {/* 
-        <table className="table problemsetpage-table is-hoverable" >
-        <thead>
-          <tr>
-            <th><abbr title="ID">ID</abbr></th>
-            <th>Problem Title</th>
-            <th><abbr title="Played">Tags</abbr></th>
-            <th><abbr title="Drawn">Status</abbr></th>
-            <th><abbr title="Drawn">Problem Link</abbr></th>
-          </tr>
-        </thead>
-          <tbody>
-          {this.state.problems.length == 0 ? 
-            <tr><td>No Problems</td></tr>
-            :<>
-              {this.state.problems.map((eachProblem, eachProblemIndex)=>{
-                return <EachProblem key={eachProblemIndex} data={eachProblem} index={eachProblemIndex} onClick={this.selectProblem} />
-              })}
-              </>
-          } 
-
-          </tbody>
-        </table> */}
           </div>
           <div className="blogsSection">
             <div className="doughnutGraph">

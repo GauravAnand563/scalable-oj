@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import PagebaseMiddleware from "../../Middlewares/Pagebase/Pagebase.middleware";
-// import "./CreateProblem.page.css";
-import classNames from "classnames";
 import Multiselect from "multiselect-react-dropdown";
-import styles from "./CreateProblem.page.module.css";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+// import "./CreateProblem.page.css";
+// import  "./CreateProblem.page.module.css";
+import { AiOutlinePlus } from "react-icons/ai";
+import { FiX } from "react-icons/fi";
 
 import APIRoutes from "./../../Utils/APIRoutes.json";
 let tabItemData = [
@@ -26,6 +28,7 @@ let emptyForm = {
   title: "",
   problemcode: "",
   description: "",
+  constraints: "",
   difficulty: "EASY",
   score: 1,
   tags: [],
@@ -33,8 +36,17 @@ let emptyForm = {
 };
 
 function CreateProblemPage() {
+  let navigate = useNavigate();
   let [formState, setFormState] = useState(emptyForm);
   const [selectedTag, setSelectedTag] = useState("loop");
+  const [multiselect_clicked, setMultiselect_clicked] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+
+  const [isError, setIsError] = useState(false);
+
+  const handleTabChange = (index) => {
+    setActiveTab(index);
+  };
   // let [allTags, setAllTags] = useState([]);
   // const[tagOptions,setTagOptions] = useState([])
 
@@ -47,38 +59,21 @@ function CreateProblemPage() {
     { value: "graph", key: "graph" },
   ];
   console.log(formState);
-  // const onTagChange = (event) =>{
-  //     setSelectedTag(event.value)
-  //     setFormState((prev)=>{
-  //         return {
-  //             ...prev, ["tags"]: [...prev.tags, event.value]
-  //         }
-  //     })
-  // }
-  // let getAllTags = async ()=>{
-  //     try{
-  //         let response = await fetch(APIRoutes.SERVER_HOST+APIRoutes.APIS.GET_ALL_TAGS)
-  //         let data = await response.json()
-  //         console.log(data)
-  //         let myData = data.map(()=>{
-  //                 return({
-  //                     value:data.tagname,
-  //                     label:data.tagname
-  //                 })
-  //         })
-  //         setTagOptions(data)
-  //         setAllTags(data)
-  //     }catch(e){
-  //         alert(e)
-  //     }
-  // }
 
-  // useEffect(()=>{
-  //     getAllTags()
-  // },[]);
+  let handleMultiselectClick = () => {
+    setMultiselect_clicked(true);
+    setTimeout(() => {
+      setMultiselect_clicked(false);
+    }, 2000);
+  };
+
   useEffect(() => {
     console.log(formState);
   }, [formState]);
+
+  let resetForm = () => {
+    setFormState(emptyForm);
+  };
 
   let inputChange = (e) => {
     console.log(e.target.name);
@@ -183,11 +178,22 @@ function CreateProblemPage() {
     if (response.ok) {
       let data = await response.json();
       setFormState(emptyForm);
-      alert(JSON.stringify(data));
+      navigate("/", { state: { problem_state: "success" } });
     } else {
       let data = await response.json();
-      alert(JSON.stringify(data));
+      setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 2000);
     }
+  };
+
+  const handleNewTag = () => {
+    let myTags = [...formState.tags, "new-tag"];
+    setFormState({
+      ...formState,
+      tags: myTags,
+    });
   };
   useEffect(() => {
     // For declaring Title
@@ -195,20 +201,43 @@ function CreateProblemPage() {
   }, []);
 
   return (
-    <PagebaseMiddleware>
-      <div className={styles.createProblemPageContainer}>
-        <h2 className={classNames("title is-3", styles.createProblemTitle)}>
-          Create Problem Page
-        </h2>
-        {/* <PagetabComponent tabItems={tabItemData} /> */}
-        <hr />
-        <form onSubmit={formSubmit}>
-          <div className={styles.problemCodeAndTitle}>
-            <div class="field">
-              <label class="label">Problem Code *</label>
-              <div class="control">
+    <div>
+      {isError && (
+        <div className="flex flex-row mx-4 mt-2 items-center justify-start bg-red-400 p-4 rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-6 text-black"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+
+          <div className="flex text-black items-baseline">
+            <h3 className="font-bold mx-3 ">Error Submitting Problem!</h3>
+            <div className="text-xs">
+              Something went wrong, please try again.
+            </div>
+          </div>
+        </div>
+      )}
+      <div className="flex p-4 items-center justify-center">
+        <div className="mx-8 my-2 p-8 rounded-2xl backdrop-filter backdrop-blur-lg bg-opacity-30 bg-base-200 flex flex-col h-full">
+          <form onSubmit={formSubmit} autoComplete="off">
+            <h2 className="text-center text-4xl mb-8">Create Problem</h2>
+
+            <div className="grid grid-cols-4 gap-8">
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Code *</p>
+                </label>
                 <input
-                  class="input"
+                  className="input input-bordered w-full max-w-xs"
                   type="text"
                   minLength={1}
                   placeholder="Enter Problem Code"
@@ -217,15 +246,31 @@ function CreateProblemPage() {
                   required
                   onChange={inputChange}
                 />
-                {/* <small>Without space</small> */}
               </div>
-            </div>
 
-            <div class="field">
-              <label class="label">Problem Title *</label>
-              <div class="control">
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Score *</p>
+                </label>
                 <input
-                  class="input"
+                  className="input input-bordered w-full max-w-xs"
+                  type="number"
+                  placeholder="Please Enter Score"
+                  min="1"
+                  max="4"
+                  defaultValue={formState.score}
+                  required
+                  name="score"
+                  onChange={inputChange}
+                />
+              </div>
+
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Title *</p>
+                </label>
+                <input
+                  className="input input-bordered w-full max-w-xs"
                   type="text"
                   minLength={1}
                   placeholder="Problem Title"
@@ -235,15 +280,16 @@ function CreateProblemPage() {
                   onChange={inputChange}
                 />
               </div>
-            </div>
 
-            <div class="field">
-              <label class="label">Difficulty *</label>
-              <div class="control">
-                <div class="select">
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Difficulty *</p>
+                </label>
+                <div className="">
                   <select
                     required
                     name="difficulty"
+                    className="select select-bordered w-full max-w-xs"
                     onChange={inputChange}
                     defaultValue={formState.difficulty}
                   >
@@ -257,223 +303,206 @@ function CreateProblemPage() {
                 </div>
               </div>
             </div>
-            {/* 
-                   <div class="field">
-                        <label class="label">Tags</label>
-                        <div class="control">
-                            <div class="select is-multiple">
-                                <select  multiple name="tags" onChange={inputChange} defaultValue={ formState.tags }>
-                                    <option>Select Tags</option>
-                                    {allTags.map((eachTag, eachindex)=>{
-                                        return <option key={eachindex} value={String(eachTag.tagname).toUpperCase()}> { eachTag.tagname} </option>
-                                    })}
-                                </select>
-                            </div>
-                        </div>
-                    </div> */}
 
-            {/* <Multiselect
-                    displayValue="key"
-                    onKeyPressFn={function noRefCheck(){}}
-                    onRemove={(event)=>{
-                        let myTags = event.map((e)=>{
-                            return e.value
-                        })
-                    
-                        setFormState((prev)=>{
-                        return {
-                            ...prev, ["tags"]: myTags
-                        }
-                    })
-                    }}
-                    //   onSearch={(event)=>{console.log(event)}}
-                    onSelect={(event)=>{   
-                        let myTags = event.map((e)=>{
-                            return e.value
-                        })
-                    
-                        setFormState((prev)=>{
-                        return {
-                            ...prev, ["tags"]: myTags
-                        }
-                    })}}
-                    options={allTags}
-                    /> */}
-
-            <div class="field mb-3">
-              <label class="label">Score *</label>
-              <div class="control">
-                <input
-                  className={styles.problemScore}
-                  type="number"
-                  placeholder="Please Enter Score "
-                  min="1"
-                  max="4"
-                  defaultValue={formState.constraints}
-                  required
-                  name="score"
-                  onChange={inputChange}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.descriptionAndTags}>
-            <div className={styles.description}>
-              <label class="label">Problem Description *</label>
-              <div class="control">
+            <div className="grid grid-cols-2 gap-8 mt-8">
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Description *</p>
+                </label>
                 <textarea
-                  class="textarea"
+                  className="textarea textarea-bordered w-full"
                   minLength={1}
-                  placeholder="Problem Description ... (Including Sample testcases here)"
+                  placeholder="Write the problem description here"
                   defaultValue={formState.description}
                   required
                   name="description"
                   onChange={inputChange}
                 ></textarea>
               </div>
-            </div>
 
-            <div className={styles.constraints}>
-              <label class="label">Constraints*</label>
-              <div className={styles.constraintsTextArea}>
-                <input
-                  className={styles.constraintsTextArea}
-                  type="text"
+              <div className="">
+                <label className="label">
+                  <p className="label-text">Problem Constraints *</p>
+                </label>
+                <textarea
+                  className="textarea textarea-bordered w-full"
                   minLength={1}
-                  name="constraints"
+                  placeholder="Write the constraints of the problem here"
                   defaultValue={formState.constraints}
                   required
+                  name="constraints"
                   onChange={inputChange}
+                ></textarea>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-4 gap-8 mt-8">
+              <div className="col-span-3">
+                <label className="label">
+                  <p className="label-text">Problem Testcases *</p>
+                </label>
+                <Tabs selectedIndex={activeTab} onSelect={handleTabChange}>
+                  <div className="overflow-x-auto">
+                    <TabList className="flex gap-2 my-4">
+                      {formState.testcases.map((_, index) => (
+                        <Tab
+                          key={index}
+                          className={`relative btn ${
+                            activeTab === index ? "bg-green-500 text-white" : ""
+                          } border-none`}
+                        >
+                          Test Case {index + 1}
+                          <button
+                            className={`absolute top-0 right-0 -mt-2 -mr-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center opacity-${
+                              activeTab === index ? 100 : 0
+                            } transition-opacity duration-200 hover:opacity-100 focus:outline-none`}
+                            onClick={() => removeTestcase(index)}
+                          >
+                            <FiX className="text-sm" />
+                          </button>
+                        </Tab>
+                      ))}
+                      <button
+                        className="btn text-white font-bold py-2 px-4 rounded-xl text-xl focus:outline-none"
+                        onClick={addTestcase}
+                      >
+                        <AiOutlinePlus />
+                      </button>
+                    </TabList>
+                  </div>
+                  <div className="">
+                    {formState.testcases.map((eachtestcase, index) => (
+                      <TabPanel key={index}>
+                        <div className="mb-4">
+                          <label className="label">
+                            <p className="label-text">Input *</p>
+                          </label>
+                          <textarea
+                            className="textarea textarea-bordered w-full"
+                            minLength={1}
+                            placeholder={
+                              "Input here for Test Case " + (index + 1)
+                            }
+                            required
+                            name="input"
+                            value={eachtestcase.input}
+                            onChange={(e) => onTestcaseInputChange(e, index)}
+                          ></textarea>
+                        </div>
+                        <div>
+                          <label className="label">
+                            <p className="label-text">Output *</p>
+                          </label>
+                          <textarea
+                            className="textarea textarea-bordered w-full"
+                            minLength={1}
+                            placeholder={
+                              "Output here for Test Case " + (index + 1)
+                            }
+                            required
+                            name="output"
+                            value={eachtestcase.output}
+                            onChange={(e) => onTestcaseInputChange(e, index)}
+                          ></textarea>
+                        </div>
+                      </TabPanel>
+                    ))}
+                  </div>
+                </Tabs>
+              </div>
+
+              <div className="col-span-1">
+                <label className="label">
+                  <p className="label-text">Problem Labels *</p>
+                </label>
+                <Multiselect
+                  style={{
+                    chips: {
+                      cursor: "pointer",
+                      padding: "8px",
+                      borderRadius: "5px",
+                      backgroundColor: "#5d6e91",
+                    },
+                    searchBox: {
+                      maxWidth: "20rem",
+                      "border-opacity": "0.2",
+                      "padding-left": "1rem",
+                      "padding-right": "1rem",
+                      "font-size": "1rem",
+                      "line-height": "2",
+                      "line-height": "1.5rem",
+                      "border-opacity": "0.2",
+                      "border-width": "1px",
+                      outline: multiselect_clicked
+                        ? "2px solid #5d6e91"
+                        : "none",
+                      outlineOffset: multiselect_clicked ? "2px" : "0",
+                    },
+                    multiselectContainer: {
+                      color: "#5d6e91",
+                    },
+                    option: {
+                      backgroundColor: "#222831",
+                      padding: "0.5rem",
+                    },
+                  }}
+                  displayValue="key"
+                  onRemove={(event) => {
+                    let myTags = event.map((e) => {
+                      return e.value;
+                    });
+
+                    setFormState((prev) => {
+                      return {
+                        ...prev,
+                        ["tags"]: myTags,
+                      };
+                    });
+                  }}
+                  onSelect={(event) => {
+                    handleMultiselectClick();
+                    let myTags = event.map((e) => {
+                      return e.value;
+                    });
+
+                    setFormState((prev) => {
+                      return {
+                        ...prev,
+                        ["tags"]: myTags,
+                      };
+                    });
+                  }}
+                  disablePreSelectedValues={true}
+                  closeOnSelect={true}
+                  placeholder="Select Tags"
+                  onSearch={(query) => {
+                    // if query is not found in tags then add an option to add new tag
+                    console.log(query);
+                    if (!allTags?.includes(query)) {
+                      allTags.push({ value: query, key: query });
+                    }
+                  }}
+                  options={allTags}
                 />
               </div>
             </div>
 
-            {/*             
-            <div class="field">
-                <label class="label">Score *</label>
-                <div class="control">
-                    <input className="input" type="number" placeholder="Please Enter Score " min="1" max="4" defaultValue={ formState.score } required name="score" onChange={inputChange} />
-                </div>
-            </div> */}
-            <div className={styles.tags}>
-              <label class="label">Select Label *</label>
-              <Multiselect
-                className={styles.multiselect}
-                displayValue="key"
-                onKeyPressFn={function noRefCheck() {}}
-                onRemove={(event) => {
-                  let myTags = event.map((e) => {
-                    return e.value;
-                  });
-
-                  setFormState((prev) => {
-                    return {
-                      ...prev,
-                      ["tags"]: myTags,
-                    };
-                  });
-                }}
-                //   onSearch={(event)=>{console.log(event)}}
-                onSelect={(event) => {
-                  let myTags = event.map((e) => {
-                    return e.value;
-                  });
-
-                  setFormState((prev) => {
-                    return {
-                      ...prev,
-                      ["tags"]: myTags,
-                    };
-                  });
-                }}
-                options={allTags}
-              />
-            </div>
-          </div>
-
-          <div className="subtitle">
-            <div className={styles.addTestCasesContainer}>
-              <label class="label ml-1">Input Testcases *</label>
-              <div className="control ml-1 mb-2">
-                <button
-                  className={styles.addTestCases}
-                  type="button"
-                  onClick={addTestcase}
-                >
-                  Add Testcase
-                </button>
-              </div>
-              {formState.testcases.map((eachtestcase, eachindex) => {
-                return (
-                  <>
-                    <div
-                      className=""
-                      style={{
-                        border: "1px solid #dedede",
-                        borderRadius: "5px",
-                        padding: "20px",
-                        margin: "5px",
-                      }}
-                    >
-                      <h3 className="subtitle is-3"> Testcase {eachindex}</h3>
-
-                      <div class="control">
-                        <div className="label">Input {eachindex}</div>
-                        <textarea
-                          class="textarea"
-                          minLength={1}
-                          placeholder="Input here"
-                          required
-                          name="input"
-                          defaultValue={eachtestcase.input}
-                          onChange={(e) => onTestcaseInputChange(e, eachindex)}
-                        ></textarea>
-                      </div>
-                      <div class="control">
-                        <div className="label">Output {eachindex}</div>
-                        <textarea
-                          class="textarea"
-                          minLength={1}
-                          placeholder="Output Here"
-                          required
-                          name="output"
-                          defaultValue={eachtestcase.output}
-                          onChange={(e) => onTestcaseInputChange(e, eachindex)}
-                        ></textarea>
-                      </div>
-                      <br />
-                      <button
-                        className={styles.deleteButton}
-                        onClick={() => removeTestcase(eachindex)}
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </>
-                );
-              })}
-            </div>
-          </div>
-
-          <div class="field is-grouped ml-6">
-            <div class="control ml-6">
-              <button className={styles.createProblemButton}>
+            <div className="grid grid-cols-2 my-8">
+              <button
+                className="btn btn-outline basis-1/2 mr-4 "
+                onClick={resetForm}
+                type="reset"
+              >
+                Reset
+              </button>
+              <button className="btn btn-success basis-1/2 ml-4 ">
                 Create Problem Now
               </button>
             </div>
-            <div class="control">
-              <button className={styles.deleteButton} type="reset">
-                Reset
-              </button>
-            </div>
-          </div>
-        </form>
-
-        <br />
-        <br />
+          </form>
+        </div>
       </div>
-    </PagebaseMiddleware>
+    </div>
   );
 }
 export default CreateProblemPage;

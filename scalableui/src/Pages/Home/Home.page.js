@@ -36,6 +36,7 @@ function HomePage() {
   const location = useLocation();
   const navigate = useNavigate();
   const loginState = location.state && location.state.login_state;
+  const problemState = location.state && location.state.problem_state;
 
   useEffect(() => {
     if (loginState === "success") {
@@ -44,6 +45,14 @@ function HomePage() {
       }, 2000);
     }
   }, [loginState, navigate]);
+
+  useEffect(() => {
+    if (problemState === "success") {
+      setTimeout(() => {
+        navigate("/", { replace: true, state: undefined });
+      }, 2000);
+    }
+  }, [problemState, navigate]);
 
   const [rows, setRows] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -173,6 +182,29 @@ function HomePage() {
               <h3 className="font-bold mx-3 ">Login Successfull!</h3>
               <div className="text-xs">
                 You may now start solving the problems
+              </div>
+            </div>
+          </div>
+        )}
+        {problemState === "success" && (
+          <div className="flex flex-row mx-4 mt-2 items-center justify-start bg-emerald-400 p-4 rounded-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="stroke-current shrink-0 h-6 w-6 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <div className="flex text-black items-baseline">
+              <h3 className="font-bold mx-3 ">Problem Added!</h3>
+              <div className="text-xs">
+                You may now start solving this problem.
               </div>
             </div>
           </div>

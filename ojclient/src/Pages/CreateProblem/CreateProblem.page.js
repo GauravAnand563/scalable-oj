@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PagebaseMiddleware from "../../Middlewares/Pagebase/Pagebase.middleware";
 // import "./CreateProblem.page.css";
-import classNames from "classnames";
 import Multiselect from "multiselect-react-dropdown";
-import styles from "./CreateProblem.page.module.css";
+// import styles from "./CreateProblem.page.module.css";
 
 import APIRoutes from "./../../Utils/APIRoutes.json";
 let tabItemData = [
@@ -46,36 +45,6 @@ function CreateProblemPage() {
     { value: "greedy", key: "greedy" },
     { value: "graph", key: "graph" },
   ];
-  console.log(formState);
-  // const onTagChange = (event) =>{
-  //     setSelectedTag(event.value)
-  //     setFormState((prev)=>{
-  //         return {
-  //             ...prev, ["tags"]: [...prev.tags, event.value]
-  //         }
-  //     })
-  // }
-  // let getAllTags = async ()=>{
-  //     try{
-  //         let response = await fetch(APIRoutes.SERVER_HOST+APIRoutes.APIS.GET_ALL_TAGS)
-  //         let data = await response.json()
-  //         console.log(data)
-  //         let myData = data.map(()=>{
-  //                 return({
-  //                     value:data.tagname,
-  //                     label:data.tagname
-  //                 })
-  //         })
-  //         setTagOptions(data)
-  //         setAllTags(data)
-  //     }catch(e){
-  //         alert(e)
-  //     }
-  // }
-
-  // useEffect(()=>{
-  //     getAllTags()
-  // },[]);
   useEffect(() => {
     console.log(formState);
   }, [formState]);
@@ -197,11 +166,6 @@ function CreateProblemPage() {
   return (
     <PagebaseMiddleware>
       <div className={styles.createProblemPageContainer}>
-        <h2 className={classNames("title is-3", styles.createProblemTitle)}>
-          Create Problem Page
-        </h2>
-        {/* <PagetabComponent tabItems={tabItemData} /> */}
-        <hr />
         <form onSubmit={formSubmit}>
           <div className={styles.problemCodeAndTitle}>
             <div class="field">
@@ -257,48 +221,6 @@ function CreateProblemPage() {
                 </div>
               </div>
             </div>
-            {/* 
-                   <div class="field">
-                        <label class="label">Tags</label>
-                        <div class="control">
-                            <div class="select is-multiple">
-                                <select  multiple name="tags" onChange={inputChange} defaultValue={ formState.tags }>
-                                    <option>Select Tags</option>
-                                    {allTags.map((eachTag, eachindex)=>{
-                                        return <option key={eachindex} value={String(eachTag.tagname).toUpperCase()}> { eachTag.tagname} </option>
-                                    })}
-                                </select>
-                            </div>
-                        </div>
-                    </div> */}
-
-            {/* <Multiselect
-                    displayValue="key"
-                    onKeyPressFn={function noRefCheck(){}}
-                    onRemove={(event)=>{
-                        let myTags = event.map((e)=>{
-                            return e.value
-                        })
-                    
-                        setFormState((prev)=>{
-                        return {
-                            ...prev, ["tags"]: myTags
-                        }
-                    })
-                    }}
-                    //   onSearch={(event)=>{console.log(event)}}
-                    onSelect={(event)=>{   
-                        let myTags = event.map((e)=>{
-                            return e.value
-                        })
-                    
-                        setFormState((prev)=>{
-                        return {
-                            ...prev, ["tags"]: myTags
-                        }
-                    })}}
-                    options={allTags}
-                    /> */}
 
             <div class="field mb-3">
               <label class="label">Score *</label>
@@ -349,13 +271,6 @@ function CreateProblemPage() {
               </div>
             </div>
 
-            {/*             
-            <div class="field">
-                <label class="label">Score *</label>
-                <div class="control">
-                    <input className="input" type="number" placeholder="Please Enter Score " min="1" max="4" defaultValue={ formState.score } required name="score" onChange={inputChange} />
-                </div>
-            </div> */}
             <div className={styles.tags}>
               <label class="label">Select Label *</label>
               <Multiselect
@@ -374,7 +289,6 @@ function CreateProblemPage() {
                     };
                   });
                 }}
-                //   onSearch={(event)=>{console.log(event)}}
                 onSelect={(event) => {
                   let myTags = event.map((e) => {
                     return e.value;
