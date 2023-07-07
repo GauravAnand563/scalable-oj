@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PagetabComponent from "../../Components/Pagetab/Pagetab.component";
-import PagebaseMiddleware from "../../Middlewares/Pagebase/Pagebase.middleware";
+import HomePage from "../Home/Home.page";
 import APIRoutes from "./../../Utils/APIRoutes.json";
 import "./Problem.page.css";
 
@@ -50,6 +49,7 @@ class ProblemsetPage extends Component {
   selectProblem = async (problemid) => {
     console.log(problemid);
   };
+  // let navigate = useNavigate();
 
   fetchAllProblems = async () => {
     let response = await fetch(
@@ -72,56 +72,7 @@ class ProblemsetPage extends Component {
   };
 
   render() {
-    return (
-      <PagebaseMiddleware>
-        <h2 className="title is-3" style={{ margin: 0 }}>
-          Problemset
-        </h2>
-
-        <PagetabComponent tabItems={tabItemData} />
-        <hr />
-
-        <table className="table problemsetpage-table is-hoverable">
-          <thead>
-            <tr>
-              <th>
-                <abbr title="ID">ID</abbr>
-              </th>
-              <th>Problem Title</th>
-              <th>
-                <abbr title="Played">Tags</abbr>
-              </th>
-              <th>
-                <abbr title="Drawn">Status</abbr>
-              </th>
-              <th>
-                <abbr title="Drawn">Problem Link</abbr>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.problems.length == 0 ? (
-              <tr>
-                <td>No Problems</td>
-              </tr>
-            ) : (
-              <>
-                {this.state.problems.map((eachProblem, eachProblemIndex) => {
-                  return (
-                    <EachProblem
-                      key={eachProblemIndex}
-                      data={eachProblem}
-                      index={eachProblemIndex}
-                      onClick={this.selectProblem}
-                    />
-                  );
-                })}
-              </>
-            )}
-          </tbody>
-        </table>
-      </PagebaseMiddleware>
-    );
+    return <HomePage />;
   }
 }
 export default ProblemsetPage;

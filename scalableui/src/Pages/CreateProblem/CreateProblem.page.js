@@ -364,7 +364,10 @@ function CreateProblemPage() {
                       ))}
                       <button
                         className="btn text-white font-bold py-2 px-4 rounded-xl text-xl focus:outline-none"
-                        onClick={addTestcase}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          addTestcase();
+                        }}
                       >
                         <AiOutlinePlus />
                       </button>

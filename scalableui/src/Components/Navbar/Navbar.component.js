@@ -11,7 +11,7 @@ function NavbarComponent() {
   let tabItems = [
     // {to:"/", content: 'Home'  },
     { to: "/contests", content: "Contests" },
-    { to: "/problemset", content: "Problems" },
+    // { to: "/problemset", content: "Problems" },
     { to: "/about", content: "About" },
     { to: "/createproblem", content: "Create Problem" },
   ];
