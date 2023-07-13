@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build: redesignedoj/.
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./redesignedoj/.:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      SERVER_NAME: backend
+
+  # frontend:
+  #   build: ojclient/.
+  #   command: serve -s build
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     SERVER_NAME: frontend
+
+  executionengine:
+    build: redesignedoj/executionengine/.
+    command: node index.js
+    environment:
+      SERVER_NAME: executionengine

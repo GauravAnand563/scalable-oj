@@ -1,0 +1,6 @@
+7_BUILDROADS_code.cpp:1:1: error: ‘package’ does not name a type
+    1 | package main
+      | ^~~~~~~
+7_BUILDROADS_code.cpp:8:2: error: ‘klknl’ does not name a type
+    8 | }klknl
+      |  ^~~~~

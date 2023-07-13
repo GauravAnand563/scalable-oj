@@ -1,0 +1,110 @@
+.homepage-base{
+    padding-top: 20px;
+}
+.homepage-base .homepage-tab{
+    width: 100%;
+    display: flex;
+
+}
+.homepage-base .homepage-tab > div{
+    margin-left: 2px;
+    margin-right: 2px;
+    padding:  6px;
+    border-radius: 2px;
+}
+.homepage-base .homepage-tab > div > a{
+
+    text-decoration: none;
+    color:#009;
+}
+.homepage-base .homepage-tab > div:hover{
+    background-color:  #ebebeb;;
+}
+
+.problemCodeAndTitle{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.description{
+    margin-left:135px;
+    margin-bottom:20px;
+    width:670px;
+    margin-top:10px;
+}
+
+.tags{
+    width:200px;
+    /* margin-left:162px; */
+    margin-top:10px;
+    margin-right:40px;
+}
+
+.descriptionAndTags{
+    display:flex;
+    justify-content:space-between;
+}
+
+.addTestCasesContainer{
+    margin-left:142px;
+    margin-right:125px;
+}
+
+.createProblemButton{
+    background-color:#8bc96e;
+    height:40px;
+    border-radius:10px;
+    margin-left:50px;
+    color:white;
+    border:white;
+}
+
+.deleteButton{
+    height:40px;
+    border-radius:10px;
+    background-color:#ff3333;
+    color:white;
+    border:white;
+}
+
+.addTestCases{
+    background-color:#1da1f2;
+    color:white;
+    border-radius:10px;
+    height:40px;
+    border:white;
+}
+
+.createProblemTitle{
+    margin-left:50px;
+    padding-top:10px;
+}
+
+.createProblemPageContainer{
+    background-color:#f0f8f0;
+    margin-top:45px;
+}
+
+.multiselect{
+    background-color:white;
+}
+
+.constraints{
+    margin-top:10px;
+    /* margin-right:85px; */
+    height:200px;
+    margin-left:84px;
+}
+
+.constraintsTextArea{
+    height:120px;
+    width:300px;
+    border:grey;
+
+}
+
+.problemScore{
+    width:100px;
+    height:40px;
+}

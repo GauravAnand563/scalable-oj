@@ -1,0 +1,57 @@
+7_PROB7_code.cpp:5:19: warning: character constant too long for its type
+    5 |   await page.goto('https://accounts.google.com/');
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7_PROB7_code.cpp:8:30: warning: character constant too long for its type
+    8 |   await page.waitForSelector('input[type="email"]');
+      |                              ^~~~~~~~~~~~~~~~~~~~~
+7_PROB7_code.cpp:9:20: warning: character constant too long for its type
+    9 |   await page.click('input[type="email"]');
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+7_PROB7_code.cpp:12:30: warning: character constant too long for its type
+   12 |   await page.waitForSelector('#identifierNext');
+      |                              ^~~~~~~~~~~~~~~~~
+7_PROB7_code.cpp:13:20: warning: character constant too long for its type
+   13 |   await page.click('#identifierNext');
+      |                    ^~~~~~~~~~~~~~~~~
+7_PROB7_code.cpp:18:29: warning: character constant too long for its type
+   18 |   await page.keyboard.press('Enter');
+      |                             ^~~~~~~
+7_PROB7_code.cpp:33:30: warning: character constant too long for its type
+   33 |     await page.keyboard.down('ControlLeft');
+      |                              ^~~~~~~~~~~~~
+7_PROB7_code.cpp:34:31: warning: multi-character character constant [-Wmultichar]
+   34 |     await page.keyboard.press('KeyE');
+      |                               ^~~~~~
+7_PROB7_code.cpp:35:28: warning: character constant too long for its type
+   35 |     await page.keyboard.up('ControlLeft');
+      |                            ^~~~~~~~~~~~~
+7_PROB7_code.cpp:42:30: warning: character constant too long for its type
+   42 |     await page.keyboard.down('ControlLeft');
+      |                              ^~~~~~~~~~~~~
+7_PROB7_code.cpp:43:31: warning: multi-character character constant [-Wmultichar]
+   43 |     await page.keyboard.press('KeyD');
+      |                               ^~~~~~
+7_PROB7_code.cpp:44:28: warning: character constant too long for its type
+   44 |     await page.keyboard.up('ControlLeft');
+      |                            ^~~~~~~~~~~~~
+7_PROB7_code.cpp:3:1: error: ‘async’ does not name a type
+    3 | async function authentication(page, email, password, timeout = 10000) {
+      | ^~~~~
+7_PROB7_code.cpp:23:1: error: ‘async’ does not name a type
+   23 | async function meetLobby(page, meetCode, timeout = 10000) {
+      | ^~~~~
+7_PROB7_code.cpp:31:1: error: ‘async’ does not name a type
+   31 | async function turnOffCam(page, timeout = 10000) {
+      | ^~~~~
+7_PROB7_code.cpp:40:1: error: ‘async’ does not name a type
+   40 | async function turnOffMic(page, timeout = 10000) {
+      | ^~~~~
+7_PROB7_code.cpp:54:1: warning: keyword ‘export’ is deprecated, and is ignored
+   54 | export default {
+      | ^~~~~~
+7_PROB7_code.cpp:54:8: error: expected unqualified-id before ‘default’
+   54 | export default {
+      |        ^~~~~~~
+7_PROB7_code.cpp:59:3: error: ‘fsdfds’ does not name a type
+   59 | };fsdfds
+      |   ^~~~~~

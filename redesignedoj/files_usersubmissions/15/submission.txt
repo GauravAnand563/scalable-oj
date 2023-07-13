@@ -1,0 +1,10 @@
+7_PROB7_code.cpp: In function ‘int main()’:
+7_PROB7_code.cpp:5:12: error: expected identifier before numeric constant
+    5 |     return 0;
+      |            ^
+7_PROB7_code.cpp:5:5: error: named return values are no longer supported
+    5 |     return 0;
+      |     ^~~~~~
+7_PROB7_code.cpp:6:4: error: expected ‘{’ at end of input
+    6 |   }
+      |    ^

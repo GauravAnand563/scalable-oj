@@ -1,0 +1,23 @@
+
+/* Page base is defiened in LoginComponent */
+.page-base .logincomponent-form{
+    padding: 10px;
+    border: 1px solid #929191;
+    border-radius: 3px;
+}
+
+.logincomponent-form .logincomponent-group{
+    padding: 8px;
+}
+.logincomponent-group .logincomponent-group-item-title{
+    font-size: medium;
+    font-weight: 400;
+}
+.logincomponent-group .logincomponent-group-item-input{
+    padding: 5px;
+}
+.logincomponent-submit{
+    padding:5px 20px 5px 20px; 
+    font-size: 16px;
+    
+}

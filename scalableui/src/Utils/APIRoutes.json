@@ -1,0 +1,18 @@
+{
+  "SERVER_HOST": "http://localhost:8000",
+  "APIS": {
+    "REGISTER_USER": "/users/register/",
+    "LOGIN_USER": "/users/login/",
+    "STATS_USER": "/users/stats/",
+    "GET_USER": "/users/getProfile/",
+    "LOGOUT_USER": "/users/logout/",
+    "ACTIVATE_USER": "/users/activate/<str:uidb64>/<str:token>",
+    "GET_ALL_PROBLEMS": "/problems/getAllProblems",
+    "GET_PROBLEMS_BY_PAGE": "/problems/getAllProblems/",
+    "GET_PROBLEM_BY_ID": "/problems/getProblemById/",
+    "SUBMIT_PROBLEM": "/submissions/create_submission/",
+    "GET_USER_SUBMISSIONS": "/submissions/get_user_submissions/",
+    "CREATE_PROBLEM": "/problems/create_problem/",
+    "GET_ALL_TAGS": "/problems/getTags"
+  }
+}

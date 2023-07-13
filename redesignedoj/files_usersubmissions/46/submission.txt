@@ -1,0 +1,4 @@
+6_PROB7_code.cpp: In function ‘int main()’:
+6_PROB7_code.cpp:3:12: error: expected ‘}’ at end of input
+    3 | int main(){
+      |           ~^

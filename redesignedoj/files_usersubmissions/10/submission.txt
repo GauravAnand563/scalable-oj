@@ -1,0 +1,7 @@
+7_BUILDROADS_code.cpp: In function ‘int main()’:
+7_BUILDROADS_code.cpp:5:11: error: expected ‘;’ before ‘}’ token
+    5 |   return 0
+      |           ^
+      |           ;
+    6 | }
+      | ~          

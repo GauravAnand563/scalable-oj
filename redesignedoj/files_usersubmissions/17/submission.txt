@@ -1,0 +1,7 @@
+7_Gaurav_code.cpp: In function ‘int main()’:
+7_Gaurav_code.cpp:5:14: error: expected ‘}’ at end of input
+    5 |     return 0;
+      |              ^
+7_Gaurav_code.cpp:3:13: note: to match this ‘{’
+    3 |   int main(){
+      |             ^

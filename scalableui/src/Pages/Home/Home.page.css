@@ -1,0 +1,116 @@
+/* .homepage-base{
+    padding-top: 20px;
+}
+.homepage-base .homepage-tab{
+    width: 100%;
+    display: flex;
+
+}
+.homepage-base .homepage-tab > div{
+    margin-left: 2px;
+    margin-right: 2px;
+    padding:  6px;
+    border-radius: 2px;
+}
+.homepage-base .homepage-tab > div > a{
+
+    text-decoration: none;
+    color:#009;
+}
+.homepage-base .homepage-tab > div:hover{
+    background-color:  #ebebeb;;
+} */
+
+.homePageText{
+    display:flex;
+    /* justify-content:center; */
+    font-size: 40px;
+    margin-left:30px;
+    
+}
+
+.tableContainer{
+    margin-left:30px;
+    width:65%;
+    height:700px;
+    /* background-color:grey; */
+    /* border:1px solid black; */
+    /* border-radius:5px; */
+}
+
+.blogsSection{
+    width:30%;
+    height:700px;
+    background: #f4f4f4;
+    border-radius:12px;
+    margin-left:20px;
+}
+
+.blogsAndTable{
+    display:flex;
+}
+
+.tableClass{
+    background-color:rgb(228, 219, 219);
+    width:50%;
+}
+
+.buttonClass{
+    width:60px;
+    height:25px;
+    background-color:#1da1f2;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 5px;
+}
+
+.searchBoxClass{
+    width:300px;
+    height:40px;
+    margin-left:-10px;
+    border-radius:7px;
+}
+
+.doughnutGraph{
+    height: 400px;
+    width: 1400px;
+   margin-left:65px;
+    margin-top:50px;
+}
+
+.buttonClass:hover{
+    color:black;
+    background-color:white;
+}
+
+.homePageContainer{
+    background-color:#F7FBFC;
+    height:1000px;
+    /* margin-top:-44px; */
+}
+
+.alltags{
+    display:flex;
+        padding-left:20px;
+}
+
+.chipClass{
+    margin:10px;
+    background-color:#f7efe3;
+}
+
+.chipsContainer{
+    display:flex;
+    justify-content:center;
+}
+.crossIcon{
+margin-left:-12px;
+margin-top:12px;
+}
+
+.filterTagsText{
+    margin-left:25px;
+}
+

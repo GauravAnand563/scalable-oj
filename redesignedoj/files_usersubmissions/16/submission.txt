@@ -1,0 +1,14 @@
+ ----------------- TestcaseIndex=0 ----------------- 
+ :STDOUT:  
+YKCIV
+
+:STDERR:
+
+
+ ----------------- TestcaseIndex=1 ----------------- 
+ :STDOUT:  
+
+
+:STDERR:
+
+

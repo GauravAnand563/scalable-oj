@@ -1,0 +1,7 @@
+1_BUILDROADS_code.cpp: In function ‘int main()’:
+1_BUILDROADS_code.cpp:48:46: error: expected ‘;’ before ‘}’ token
+   48 |         cout<<res[i-1+1]<<" "<<res[i+1]<<"\n"
+      |                                              ^
+      |                                              ;
+   49 |     }
+      |     ~                                         
