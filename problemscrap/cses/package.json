@@ -1,0 +1,21 @@
+{
+  "name": "cses",
+  "version": "1.0.0",
+  "description": "Fetch Problems from CSES problemset page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "problem",
+    "scraping",
+    "online",
+    "judge",
+    "cses"
+  ],
+  "author": "Gaurav Anand",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^20.8.0"
+  }
+}
