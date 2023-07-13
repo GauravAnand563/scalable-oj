@@ -1,3 +1,6 @@
-1_PROB7_code.cpp:1:24: error: missing terminating > character
-    1 | #include <bits/stdc++.h
-      |                        ^
+ ----------------- TestcaseIndex=0 ----------------- 
+ :STDOUT:  
+
+:STDERR:
+
+

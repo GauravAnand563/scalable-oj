@@ -2,6 +2,7 @@ import { Editor } from "@monaco-editor/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
+import APIRoutes from "./../../../Utils/APIRoutes.json";
 import { codeSamples, languages } from "./ProblemExamples";
 function ProblemSubmitPage(props) {
   let { id } = useParams();
@@ -114,33 +115,32 @@ function ProblemSubmitPage(props) {
   // Code submit
   let codeSubmit = async (e) => {
     e.preventDefault();
-    console.log(sourcecode);
-    // let response = await fetch(
-    //   APIRoutes.SERVER_HOST + APIRoutes.APIS.SUBMIT_PROBLEM,
-    //   {
-    //     method: "POST",
-    //     credentials: "include",
-    //     headers: {
-    //       "Content-type": "text/plain",
-    //       problemcode: problem.problemcode,
-    //       language: "C++",
-    //     },
-    //     body: sourcecode,
-    //   }
-    // );
+    let response = await fetch(
+      APIRoutes.SERVER_HOST + APIRoutes.APIS.SUBMIT_PROBLEM,
+      {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-type": "text/plain",
+          problemcode: problem.problemcode,
+          language: "C++",
+        },
+        body: sourcecode,
+      }
+    );
 
-    // if (response.ok) {
-    //   let dataResults = await response.json();
-    //   setResults({
-    //     output: dataResults.output,
-    //     status: dataResults.status,
-    //     submission: dataResults.submission,
-    //     verdict: dataResults.verdict,
-    //   });
-    // } else {
-    //   let dataResults = await response.json();
-    //   // alert(dataResults.status);
-    // }
+    if (response.ok) {
+      let dataResults = await response.json();
+      setResults({
+        output: dataResults.output,
+        status: dataResults.status,
+        submission: dataResults.submission,
+        verdict: dataResults.verdict,
+      });
+    } else {
+      let dataResults = await response.json();
+      // alert(dataResults.status);
+    }
   };
 
   return (
@@ -222,13 +222,25 @@ function ProblemSubmitPage(props) {
             }}
             editorDidMount={handleEditorDidMount}
           />
+          {/* Open the modal using ID.showModal() method */}
+          {/* <button className="btn" onClick={() => window.my_modal_2.showModal()}>
+            open modal
+          </button>
+          <dialog id="my_modal_2" className="modal h-screen w-screen">
+            <form method="dialog" className="modal-box">
+              <h3 className="font-bold text-lg">Hello!</h3>
+              <p className="py-4">Press ESC key or click outside to close</p>
+            </form>
+            <form method="dialog" className="modal-backdrop">
+              <button>close</button>
+            </form>
+          </dialog> */}
         </div>
         <div>
           <div className="grid grid-cols-2 my-2">
             <button
               className="btn btn-outline basis-1/2 mr-4 "
               onClick={(e) => {
-                // window.output_modal.showModal();
                 setSourcecode(codeSamples[language]);
               }}
               type="reset"

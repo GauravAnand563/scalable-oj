@@ -1,7 +1,6 @@
-1_PROB7_code.cpp: In function ‘int main()’:
-1_PROB7_code.cpp:6:40: error: expected ‘;’ before ‘return’
-    6 | for(int i=1; i <= n; i++) cout<<i<<endl
-      |                                        ^
-      |                                        ;
-    7 |  return 0;
-      |  ~~~~~~                                 
+ ----------------- TestcaseIndex=0 ----------------- 
+ :STDOUT:  
+
+:STDERR:
+
+
