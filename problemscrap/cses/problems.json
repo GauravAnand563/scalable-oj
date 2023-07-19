@@ -1,0 +1,2157 @@
+[
+  {
+    "title": "Introductory Problems",
+    "problems": [
+      {
+        "title": "Weird Algorithm",
+        "url": "https://cses.fi/problemset/task/1068",
+        "score": "0.956",
+        "code": "747E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Missing Number",
+        "url": "https://cses.fi/problemset/task/1083",
+        "score": "0.946",
+        "code": "4A21",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Repetitions",
+        "url": "https://cses.fi/problemset/task/1069",
+        "score": "0.951",
+        "code": "591D",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Increasing Array",
+        "url": "https://cses.fi/problemset/task/1094",
+        "score": "0.957",
+        "code": "09B5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Permutations",
+        "url": "https://cses.fi/problemset/task/1070",
+        "score": "0.967",
+        "code": "F952",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Number Spiral",
+        "url": "https://cses.fi/problemset/task/1071",
+        "score": "0.918",
+        "code": "3CE7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Two Knights",
+        "url": "https://cses.fi/problemset/task/1072",
+        "score": "0.966",
+        "code": "FFE5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Two Sets",
+        "url": "https://cses.fi/problemset/task/1092",
+        "score": "0.922",
+        "code": "7A52",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Bit Strings",
+        "url": "https://cses.fi/problemset/task/1617",
+        "score": "0.946",
+        "code": "4CBB",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Trailing Zeros",
+        "url": "https://cses.fi/problemset/task/1618",
+        "score": "0.935",
+        "code": "97FA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coin Piles",
+        "url": "https://cses.fi/problemset/task/1754",
+        "score": "0.905",
+        "code": "864A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Palindrome Reorder",
+        "url": "https://cses.fi/problemset/task/1755",
+        "score": "0.936",
+        "code": "ACD9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Gray Code",
+        "url": "https://cses.fi/problemset/task/2205",
+        "score": "0.876",
+        "code": "64CF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tower of Hanoi",
+        "url": "https://cses.fi/problemset/task/2165",
+        "score": "0.957",
+        "code": "86EF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Creating Strings",
+        "url": "https://cses.fi/problemset/task/1622",
+        "score": "0.971",
+        "code": "B096",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Apple Division",
+        "url": "https://cses.fi/problemset/task/1623",
+        "score": "0.870",
+        "code": "8E4A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Chessboard and Queens",
+        "url": "https://cses.fi/problemset/task/1624",
+        "score": "0.979",
+        "code": "54D7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Digit Queries",
+        "url": "https://cses.fi/problemset/task/2431",
+        "score": "0.824",
+        "code": "13DF",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Grid Paths",
+        "url": "https://cses.fi/problemset/task/1625",
+        "score": "0.781",
+        "code": "A08C",
+        "difficulty": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "title": "Sorting and Searching",
+    "problems": [
+      {
+        "title": "Distinct Numbers",
+        "url": "https://cses.fi/problemset/task/1621",
+        "score": "0.896",
+        "code": "3C76",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Apartments",
+        "url": "https://cses.fi/problemset/task/1084",
+        "score": "0.872",
+        "code": "3580",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Ferris Wheel",
+        "url": "https://cses.fi/problemset/task/1090",
+        "score": "0.911",
+        "code": "5448",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Concert Tickets",
+        "url": "https://cses.fi/problemset/task/1091",
+        "score": "0.834",
+        "code": "C24D",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Restaurant Customers",
+        "url": "https://cses.fi/problemset/task/1619",
+        "score": "0.915",
+        "code": "BA4A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Movie Festival",
+        "url": "https://cses.fi/problemset/task/1629",
+        "score": "0.933",
+        "code": "F64F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sum of Two Values",
+        "url": "https://cses.fi/problemset/task/1640",
+        "score": "0.876",
+        "code": "73A6",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Maximum Subarray Sum",
+        "url": "https://cses.fi/problemset/task/1643",
+        "score": "0.947",
+        "code": "FFE8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Stick Lengths",
+        "url": "https://cses.fi/problemset/task/1074",
+        "score": "0.944",
+        "code": "270C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Missing Coin Sum",
+        "url": "https://cses.fi/problemset/task/2183",
+        "score": "0.960",
+        "code": "EA41",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Collecting Numbers",
+        "url": "https://cses.fi/problemset/task/2216",
+        "score": "0.922",
+        "code": "C5AA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Collecting Numbers II",
+        "url": "https://cses.fi/problemset/task/2217",
+        "score": "0.766",
+        "code": "FF65",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Playlist",
+        "url": "https://cses.fi/problemset/task/1141",
+        "score": "0.856",
+        "code": "7AF3",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Towers",
+        "url": "https://cses.fi/problemset/task/1073",
+        "score": "0.925",
+        "code": "471B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Traffic Lights",
+        "url": "https://cses.fi/problemset/task/1163",
+        "score": "0.888",
+        "code": "A975",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Josephus Problem I",
+        "url": "https://cses.fi/problemset/task/2162",
+        "score": "0.878",
+        "code": "6EDC",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Josephus Problem II",
+        "url": "https://cses.fi/problemset/task/2163",
+        "score": "0.771",
+        "code": "5366",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Nested Ranges Check",
+        "url": "https://cses.fi/problemset/task/2168",
+        "score": "0.846",
+        "code": "434A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Nested Ranges Count",
+        "url": "https://cses.fi/problemset/task/2169",
+        "score": "0.864",
+        "code": "7A0B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Room Allocation",
+        "url": "https://cses.fi/problemset/task/1164",
+        "score": "0.853",
+        "code": "EEA7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Factory Machines",
+        "url": "https://cses.fi/problemset/task/1620",
+        "score": "0.889",
+        "code": "A568",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tasks and Deadlines",
+        "url": "https://cses.fi/problemset/task/1630",
+        "score": "0.977",
+        "code": "F55F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Reading Books",
+        "url": "https://cses.fi/problemset/task/1631",
+        "score": "0.931",
+        "code": "B2BA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sum of Three Values",
+        "url": "https://cses.fi/problemset/task/1641",
+        "score": "0.886",
+        "code": "8EB8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sum of Four Values",
+        "url": "https://cses.fi/problemset/task/1642",
+        "score": "0.894",
+        "code": "D9B7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Nearest Smaller Values",
+        "url": "https://cses.fi/problemset/task/1645",
+        "score": "0.960",
+        "code": "79D1",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Sums I",
+        "url": "https://cses.fi/problemset/task/1660",
+        "score": "0.911",
+        "code": "7FAD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Sums II",
+        "url": "https://cses.fi/problemset/task/1661",
+        "score": "0.881",
+        "code": "6D77",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Divisibility",
+        "url": "https://cses.fi/problemset/task/1662",
+        "score": "0.900",
+        "code": "AA05",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Distinct Values",
+        "url": "https://cses.fi/problemset/task/2428",
+        "score": "0.933",
+        "code": "B0E8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Array Division",
+        "url": "https://cses.fi/problemset/task/1085",
+        "score": "0.940",
+        "code": "44DE",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sliding Median",
+        "url": "https://cses.fi/problemset/task/1076",
+        "score": "0.872",
+        "code": "5E14",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sliding Cost",
+        "url": "https://cses.fi/problemset/task/1077",
+        "score": "0.872",
+        "code": "9B94",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Movie Festival II",
+        "url": "https://cses.fi/problemset/task/1632",
+        "score": "0.833",
+        "code": "16FA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Maximum Subarray Sum II",
+        "url": "https://cses.fi/problemset/task/1644",
+        "score": "0.826",
+        "code": "8C28",
+        "difficulty": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "title": "Dynamic Programming",
+    "problems": [
+      {
+        "title": "Dice Combinations",
+        "url": "https://cses.fi/problemset/task/1633",
+        "score": "0.937",
+        "code": "C389",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Minimizing Coins",
+        "url": "https://cses.fi/problemset/task/1634",
+        "score": "0.924",
+        "code": "464E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coin Combinations I",
+        "url": "https://cses.fi/problemset/task/1635",
+        "score": "0.914",
+        "code": "BBC9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coin Combinations II",
+        "url": "https://cses.fi/problemset/task/1636",
+        "score": "0.872",
+        "code": "71CF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Removing Digits",
+        "url": "https://cses.fi/problemset/task/1637",
+        "score": "0.972",
+        "code": "D3F5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grid Paths",
+        "url": "https://cses.fi/problemset/task/1638",
+        "score": "0.967",
+        "code": "173C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Book Shop",
+        "url": "https://cses.fi/problemset/task/1158",
+        "score": "0.891",
+        "code": "4C05",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Array Description",
+        "url": "https://cses.fi/problemset/task/1746",
+        "score": "0.883",
+        "code": "28BA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Towers",
+        "url": "https://cses.fi/problemset/task/2413",
+        "score": "0.938",
+        "code": "96FF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Edit Distance",
+        "url": "https://cses.fi/problemset/task/1639",
+        "score": "0.938",
+        "code": "84AA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Rectangle Cutting",
+        "url": "https://cses.fi/problemset/task/1744",
+        "score": "0.910",
+        "code": "072E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Money Sums",
+        "url": "https://cses.fi/problemset/task/1745",
+        "score": "0.958",
+        "code": "68AF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Removal Game",
+        "url": "https://cses.fi/problemset/task/1097",
+        "score": "0.900",
+        "code": "1FD3",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Two Sets II",
+        "url": "https://cses.fi/problemset/task/1093",
+        "score": "0.916",
+        "code": "ABF7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Increasing Subsequence",
+        "url": "https://cses.fi/problemset/task/1145",
+        "score": "0.875",
+        "code": "85B1",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Projects",
+        "url": "https://cses.fi/problemset/task/1140",
+        "score": "0.877",
+        "code": "04E2",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Elevator Rides",
+        "url": "https://cses.fi/problemset/task/1653",
+        "score": "0.772",
+        "code": "1DE1",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Tilings",
+        "url": "https://cses.fi/problemset/task/2181",
+        "score": "0.906",
+        "code": "9055",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Numbers",
+        "url": "https://cses.fi/problemset/task/2220",
+        "score": "0.881",
+        "code": "7E33",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  {
+    "title": "Graph Algorithms",
+    "problems": [
+      {
+        "title": "Counting Rooms",
+        "url": "https://cses.fi/problemset/task/1192",
+        "score": "0.934",
+        "code": "E0AD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Labyrinth",
+        "url": "https://cses.fi/problemset/task/1193",
+        "score": "0.803",
+        "code": "DF30",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Building Roads",
+        "url": "https://cses.fi/problemset/task/1666",
+        "score": "0.959",
+        "code": "914F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Message Route",
+        "url": "https://cses.fi/problemset/task/1667",
+        "score": "0.954",
+        "code": "971E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Building Teams",
+        "url": "https://cses.fi/problemset/task/1668",
+        "score": "0.950",
+        "code": "CC77",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Round Trip",
+        "url": "https://cses.fi/problemset/task/1669",
+        "score": "0.905",
+        "code": "8171",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Monsters",
+        "url": "https://cses.fi/problemset/task/1194",
+        "score": "0.800",
+        "code": "31E5",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Shortest Routes I",
+        "url": "https://cses.fi/problemset/task/1671",
+        "score": "0.890",
+        "code": "4882",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Shortest Routes II",
+        "url": "https://cses.fi/problemset/task/1672",
+        "score": "0.913",
+        "code": "B460",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "High Score",
+        "url": "https://cses.fi/problemset/task/1673",
+        "score": "0.576",
+        "code": "8E24",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Flight Discount",
+        "url": "https://cses.fi/problemset/task/1195",
+        "score": "0.802",
+        "code": "6B29",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Cycle Finding",
+        "url": "https://cses.fi/problemset/task/1197",
+        "score": "0.788",
+        "code": "546D",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Flight Routes",
+        "url": "https://cses.fi/problemset/task/1196",
+        "score": "0.883",
+        "code": "8C9E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Round Trip II",
+        "url": "https://cses.fi/problemset/task/1678",
+        "score": "0.871",
+        "code": "2011",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Course Schedule",
+        "url": "https://cses.fi/problemset/task/1679",
+        "score": "0.955",
+        "code": "2F11",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Longest Flight Route",
+        "url": "https://cses.fi/problemset/task/1680",
+        "score": "0.781",
+        "code": "C1AD",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Game Routes",
+        "url": "https://cses.fi/problemset/task/1681",
+        "score": "0.918",
+        "code": "3BB9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Investigation",
+        "url": "https://cses.fi/problemset/task/1202",
+        "score": "0.919",
+        "code": "5502",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Planets Queries I",
+        "url": "https://cses.fi/problemset/task/1750",
+        "score": "0.785",
+        "code": "4B93",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Planets Queries II",
+        "url": "https://cses.fi/problemset/task/1160",
+        "score": "0.803",
+        "code": "B9E3",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Planets Cycles",
+        "url": "https://cses.fi/problemset/task/1751",
+        "score": "0.887",
+        "code": "18B9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Road Reparation",
+        "url": "https://cses.fi/problemset/task/1675",
+        "score": "0.950",
+        "code": "7C0B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Road Construction",
+        "url": "https://cses.fi/problemset/task/1676",
+        "score": "0.962",
+        "code": "2F68",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Flight Routes Check",
+        "url": "https://cses.fi/problemset/task/1682",
+        "score": "0.902",
+        "code": "4BC5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Planets and Kingdoms",
+        "url": "https://cses.fi/problemset/task/1683",
+        "score": "0.956",
+        "code": "5A24",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Giant Pizza",
+        "url": "https://cses.fi/problemset/task/1684",
+        "score": "0.889",
+        "code": "1A9A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coin Collector",
+        "url": "https://cses.fi/problemset/task/1686",
+        "score": "0.902",
+        "code": "A196",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Mail Delivery",
+        "url": "https://cses.fi/problemset/task/1691",
+        "score": "0.890",
+        "code": "B052",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "De Bruijn Sequence",
+        "url": "https://cses.fi/problemset/task/1692",
+        "score": "0.947",
+        "code": "1663",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Teleporters Path",
+        "url": "https://cses.fi/problemset/task/1693",
+        "score": "0.891",
+        "code": "AF0B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Hamiltonian Flights",
+        "url": "https://cses.fi/problemset/task/1690",
+        "score": "0.871",
+        "code": "4B97",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Knight's Tour",
+        "url": "https://cses.fi/problemset/task/1689",
+        "score": "0.847",
+        "code": "ACD6",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Download Speed",
+        "url": "https://cses.fi/problemset/task/1694",
+        "score": "0.876",
+        "code": "7948",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Police Chase",
+        "url": "https://cses.fi/problemset/task/1695",
+        "score": "0.856",
+        "code": "8708",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "School Dance",
+        "url": "https://cses.fi/problemset/task/1696",
+        "score": "0.929",
+        "code": "D03C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Distinct Routes",
+        "url": "https://cses.fi/problemset/task/1711",
+        "score": "0.711",
+        "code": "7F64",
+        "difficulty": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "title": "Range Queries",
+    "problems": [
+      {
+        "title": "Static Range Sum Queries",
+        "url": "https://cses.fi/problemset/task/1646",
+        "score": "0.954",
+        "code": "25FA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Static Range Minimum Queries",
+        "url": "https://cses.fi/problemset/task/1647",
+        "score": "0.932",
+        "code": "DA74",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Dynamic Range Sum Queries",
+        "url": "https://cses.fi/problemset/task/1648",
+        "score": "0.954",
+        "code": "F003",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Dynamic Range Minimum Queries",
+        "url": "https://cses.fi/problemset/task/1649",
+        "score": "0.974",
+        "code": "70B5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Range Xor Queries",
+        "url": "https://cses.fi/problemset/task/1650",
+        "score": "0.985",
+        "code": "DD40",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Range Update Queries",
+        "url": "https://cses.fi/problemset/task/1651",
+        "score": "0.927",
+        "code": "D068",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Forest Queries",
+        "url": "https://cses.fi/problemset/task/1652",
+        "score": "0.959",
+        "code": "E7AF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Hotel Queries",
+        "url": "https://cses.fi/problemset/task/1143",
+        "score": "0.944",
+        "code": "2D77",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "List Removals",
+        "url": "https://cses.fi/problemset/task/1749",
+        "score": "0.945",
+        "code": "7F0E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Salary Queries",
+        "url": "https://cses.fi/problemset/task/1144",
+        "score": "0.836",
+        "code": "1B99",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Prefix Sum Queries",
+        "url": "https://cses.fi/problemset/task/2166",
+        "score": "0.920",
+        "code": "235B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Pizzeria Queries",
+        "url": "https://cses.fi/problemset/task/2206",
+        "score": "0.964",
+        "code": "3061",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Sum Queries",
+        "url": "https://cses.fi/problemset/task/1190",
+        "score": "0.928",
+        "code": "68C9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Distinct Values Queries",
+        "url": "https://cses.fi/problemset/task/1734",
+        "score": "0.846",
+        "code": "C0C4",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Increasing Array Queries",
+        "url": "https://cses.fi/problemset/task/2416",
+        "score": "0.857",
+        "code": "BAB2",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Forest Queries II",
+        "url": "https://cses.fi/problemset/task/1739",
+        "score": "0.922",
+        "code": "C0A7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Range Updates and Sums",
+        "url": "https://cses.fi/problemset/task/1735",
+        "score": "0.820",
+        "code": "4F87",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Polynomial Queries",
+        "url": "https://cses.fi/problemset/task/1736",
+        "score": "0.847",
+        "code": "1AAC",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Range Queries and Copies",
+        "url": "https://cses.fi/problemset/task/1737",
+        "score": "0.903",
+        "code": "B2A6",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  {
+    "title": "Tree Algorithms",
+    "problems": [
+      {
+        "title": "Subordinates",
+        "url": "https://cses.fi/problemset/task/1674",
+        "score": "0.918",
+        "code": "4733",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tree Matching",
+        "url": "https://cses.fi/problemset/task/1130",
+        "score": "0.839",
+        "code": "8DA7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tree Diameter",
+        "url": "https://cses.fi/problemset/task/1131",
+        "score": "0.928",
+        "code": "8772",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tree Distances I",
+        "url": "https://cses.fi/problemset/task/1132",
+        "score": "0.915",
+        "code": "0E81",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tree Distances II",
+        "url": "https://cses.fi/problemset/task/1133",
+        "score": "0.952",
+        "code": "9CFE",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Company Queries I",
+        "url": "https://cses.fi/problemset/task/1687",
+        "score": "0.941",
+        "code": "F104",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Company Queries II",
+        "url": "https://cses.fi/problemset/task/1688",
+        "score": "0.941",
+        "code": "D71E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Distance Queries",
+        "url": "https://cses.fi/problemset/task/1135",
+        "score": "0.935",
+        "code": "F541",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Paths",
+        "url": "https://cses.fi/problemset/task/1136",
+        "score": "0.937",
+        "code": "1C97",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subtree Queries",
+        "url": "https://cses.fi/problemset/task/1137",
+        "score": "0.931",
+        "code": "EA12",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Path Queries",
+        "url": "https://cses.fi/problemset/task/1138",
+        "score": "0.946",
+        "code": "34E1",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Path Queries II",
+        "url": "https://cses.fi/problemset/task/2134",
+        "score": "0.477",
+        "code": "A623",
+        "difficulty": "HARD"
+      },
+      {
+        "title": "Distinct Colors",
+        "url": "https://cses.fi/problemset/task/1139",
+        "score": "0.869",
+        "code": "6FC0",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Finding a Centroid",
+        "url": "https://cses.fi/problemset/task/2079",
+        "score": "0.952",
+        "code": "8F45",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Fixed-Length Paths I",
+        "url": "https://cses.fi/problemset/task/2080",
+        "score": "0.577",
+        "code": "DCCF",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Fixed-Length Paths II",
+        "url": "https://cses.fi/problemset/task/2081",
+        "score": "0.304",
+        "code": "DD17",
+        "difficulty": "HARD"
+      }
+    ]
+  },
+  {
+    "title": "Mathematics",
+    "problems": [
+      {
+        "title": "Josephus Queries",
+        "url": "https://cses.fi/problemset/task/2164",
+        "score": "0.783",
+        "code": "9C8A",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Exponentiation",
+        "url": "https://cses.fi/problemset/task/1095",
+        "score": "0.922",
+        "code": "D4EA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Exponentiation II",
+        "url": "https://cses.fi/problemset/task/1712",
+        "score": "0.804",
+        "code": "2E20",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Divisors",
+        "url": "https://cses.fi/problemset/task/1713",
+        "score": "0.874",
+        "code": "F7A5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Common Divisors",
+        "url": "https://cses.fi/problemset/task/1081",
+        "score": "0.825",
+        "code": "D99B",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Sum of Divisors",
+        "url": "https://cses.fi/problemset/task/1082",
+        "score": "0.647",
+        "code": "0B03",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Divisor Analysis",
+        "url": "https://cses.fi/problemset/task/2182",
+        "score": "0.742",
+        "code": "DDB2",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Prime Multiples",
+        "url": "https://cses.fi/problemset/task/2185",
+        "score": "0.840",
+        "code": "CD6A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Coprime Pairs",
+        "url": "https://cses.fi/problemset/task/2417",
+        "score": "0.845",
+        "code": "D769",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Binomial Coefficients",
+        "url": "https://cses.fi/problemset/task/1079",
+        "score": "0.876",
+        "code": "8690",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Creating Strings II",
+        "url": "https://cses.fi/problemset/task/1715",
+        "score": "0.933",
+        "code": "9F8B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Distributing Apples",
+        "url": "https://cses.fi/problemset/task/1716",
+        "score": "0.923",
+        "code": "7482",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Christmas Party",
+        "url": "https://cses.fi/problemset/task/1717",
+        "score": "0.915",
+        "code": "5148",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Bracket Sequences I",
+        "url": "https://cses.fi/problemset/task/2064",
+        "score": "0.895",
+        "code": "777B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Bracket Sequences II",
+        "url": "https://cses.fi/problemset/task/2187",
+        "score": "0.856",
+        "code": "DAFE",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Necklaces",
+        "url": "https://cses.fi/problemset/task/2209",
+        "score": "0.923",
+        "code": "E6DF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Grids",
+        "url": "https://cses.fi/problemset/task/2210",
+        "score": "0.928",
+        "code": "2FCA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Fibonacci Numbers",
+        "url": "https://cses.fi/problemset/task/1722",
+        "score": "0.783",
+        "code": "4BE9",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Throwing Dice",
+        "url": "https://cses.fi/problemset/task/1096",
+        "score": "0.919",
+        "code": "8C05",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Graph Paths I",
+        "url": "https://cses.fi/problemset/task/1723",
+        "score": "0.925",
+        "code": "8821",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Graph Paths II",
+        "url": "https://cses.fi/problemset/task/1724",
+        "score": "0.957",
+        "code": "CD51",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Dice Probability",
+        "url": "https://cses.fi/problemset/task/1725",
+        "score": "0.943",
+        "code": "6F37",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Moving Robots",
+        "url": "https://cses.fi/problemset/task/1726",
+        "score": "0.937",
+        "code": "B83A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Candy Lottery",
+        "url": "https://cses.fi/problemset/task/1727",
+        "score": "0.968",
+        "code": "3AFA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Inversion Probability",
+        "url": "https://cses.fi/problemset/task/1728",
+        "score": "0.171",
+        "code": "1A3E",
+        "difficulty": "HARD"
+      },
+      {
+        "title": "Stick Game",
+        "url": "https://cses.fi/problemset/task/1729",
+        "score": "0.973",
+        "code": "66C9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Nim Game I",
+        "url": "https://cses.fi/problemset/task/1730",
+        "score": "0.963",
+        "code": "D2CB",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Nim Game II",
+        "url": "https://cses.fi/problemset/task/1098",
+        "score": "0.958",
+        "code": "7B17",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Stair Game",
+        "url": "https://cses.fi/problemset/task/1099",
+        "score": "0.905",
+        "code": "4A9C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grundy's Game",
+        "url": "https://cses.fi/problemset/task/2207",
+        "score": "0.788",
+        "code": "CAAC",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Another Game",
+        "url": "https://cses.fi/problemset/task/2208",
+        "score": "0.919",
+        "code": "A30E",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  {
+    "title": "String Algorithms",
+    "problems": [
+      {
+        "title": "Word Combinations",
+        "url": "https://cses.fi/problemset/task/1731",
+        "score": "0.629",
+        "code": "B28C",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "String Matching",
+        "url": "https://cses.fi/problemset/task/1753",
+        "score": "0.652",
+        "code": "E405",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Finding Borders",
+        "url": "https://cses.fi/problemset/task/1732",
+        "score": "0.889",
+        "code": "C3C8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Finding Periods",
+        "url": "https://cses.fi/problemset/task/1733",
+        "score": "0.880",
+        "code": "CBCD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Minimal Rotation",
+        "url": "https://cses.fi/problemset/task/1110",
+        "score": "0.601",
+        "code": "2565",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Longest Palindrome",
+        "url": "https://cses.fi/problemset/task/1111",
+        "score": "0.728",
+        "code": "916C",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Required Substring",
+        "url": "https://cses.fi/problemset/task/1112",
+        "score": "0.611",
+        "code": "DABB",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Palindrome Queries",
+        "url": "https://cses.fi/problemset/task/2420",
+        "score": "0.841",
+        "code": "DA4D",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Finding Patterns",
+        "url": "https://cses.fi/problemset/task/2102",
+        "score": "0.662",
+        "code": "79A2",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Patterns",
+        "url": "https://cses.fi/problemset/task/2103",
+        "score": "0.702",
+        "code": "AE9D",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Pattern Positions",
+        "url": "https://cses.fi/problemset/task/2104",
+        "score": "0.742",
+        "code": "C61E",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Distinct Substrings",
+        "url": "https://cses.fi/problemset/task/2105",
+        "score": "0.833",
+        "code": "2C76",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Repeating Substring",
+        "url": "https://cses.fi/problemset/task/2106",
+        "score": "0.888",
+        "code": "4199",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "String Functions",
+        "url": "https://cses.fi/problemset/task/2107",
+        "score": "0.953",
+        "code": "88D7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Substring Order I",
+        "url": "https://cses.fi/problemset/task/2108",
+        "score": "0.926",
+        "code": "0D35",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Substring Order II",
+        "url": "https://cses.fi/problemset/task/2109",
+        "score": "0.780",
+        "code": "BB9D",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Substring Distribution",
+        "url": "https://cses.fi/problemset/task/2110",
+        "score": "0.914",
+        "code": "E75D",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  {
+    "title": "Geometry",
+    "problems": [
+      {
+        "title": "Point Location Test",
+        "url": "https://cses.fi/problemset/task/2189",
+        "score": "0.903",
+        "code": "1DAD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Line Segment Intersection",
+        "url": "https://cses.fi/problemset/task/2190",
+        "score": "0.784",
+        "code": "3EF4",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Polygon Area",
+        "url": "https://cses.fi/problemset/task/2191",
+        "score": "0.953",
+        "code": "0CA5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Point in Polygon",
+        "url": "https://cses.fi/problemset/task/2192",
+        "score": "0.784",
+        "code": "28A9",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Polygon Lattice Points",
+        "url": "https://cses.fi/problemset/task/2193",
+        "score": "0.961",
+        "code": "C4D6",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Minimum Euclidean Distance",
+        "url": "https://cses.fi/problemset/task/2194",
+        "score": "0.702",
+        "code": "410F",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Convex Hull",
+        "url": "https://cses.fi/problemset/task/2195",
+        "score": "0.818",
+        "code": "1BE3",
+        "difficulty": "MEDIUM"
+      }
+    ]
+  },
+  {
+    "title": "Advanced Techniques",
+    "problems": [
+      {
+        "title": "Meet in the Middle",
+        "url": "https://cses.fi/problemset/task/1628",
+        "score": "0.656",
+        "code": "7B57",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Hamming Distance",
+        "url": "https://cses.fi/problemset/task/2136",
+        "score": "0.926",
+        "code": "4080",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Beautiful Subgrids",
+        "url": "https://cses.fi/problemset/task/2137",
+        "score": "0.882",
+        "code": "8F4A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Reachable Nodes",
+        "url": "https://cses.fi/problemset/task/2138",
+        "score": "0.915",
+        "code": "1BEA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Reachability Queries",
+        "url": "https://cses.fi/problemset/task/2143",
+        "score": "0.839",
+        "code": "3B4D",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Cut and Paste",
+        "url": "https://cses.fi/problemset/task/2072",
+        "score": "0.875",
+        "code": "F902",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Substring Reversals",
+        "url": "https://cses.fi/problemset/task/2073",
+        "score": "0.915",
+        "code": "B8B5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Reversals and Sums",
+        "url": "https://cses.fi/problemset/task/2074",
+        "score": "0.917",
+        "code": "3E85",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Necessary Roads",
+        "url": "https://cses.fi/problemset/task/2076",
+        "score": "0.968",
+        "code": "533B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Necessary Cities",
+        "url": "https://cses.fi/problemset/task/2077",
+        "score": "0.937",
+        "code": "90DA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Eulerian Subgraphs",
+        "url": "https://cses.fi/problemset/task/2078",
+        "score": "0.933",
+        "code": "BCF4",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Monster Game I",
+        "url": "https://cses.fi/problemset/task/2084",
+        "score": "0.912",
+        "code": "916F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Monster Game II",
+        "url": "https://cses.fi/problemset/task/2085",
+        "score": "0.912",
+        "code": "D0DD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Subarray Squares",
+        "url": "https://cses.fi/problemset/task/2086",
+        "score": "0.835",
+        "code": "81B6",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Houses and Schools",
+        "url": "https://cses.fi/problemset/task/2087",
+        "score": "0.877",
+        "code": "FC88",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Knuth Division",
+        "url": "https://cses.fi/problemset/task/2088",
+        "score": "0.879",
+        "code": "E91C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Apples and Bananas",
+        "url": "https://cses.fi/problemset/task/2111",
+        "score": "0.899",
+        "code": "39C9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "One Bit Positions",
+        "url": "https://cses.fi/problemset/task/2112",
+        "score": "0.895",
+        "code": "BF28",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Signal Processing",
+        "url": "https://cses.fi/problemset/task/2113",
+        "score": "0.895",
+        "code": "4EA8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "New Roads Queries",
+        "url": "https://cses.fi/problemset/task/2101",
+        "score": "0.810",
+        "code": "9A0D",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Dynamic Connectivity",
+        "url": "https://cses.fi/problemset/task/2133",
+        "score": "0.876",
+        "code": "3E15",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Parcel Delivery",
+        "url": "https://cses.fi/problemset/task/2121",
+        "score": "0.869",
+        "code": "5CD3",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Task Assignment",
+        "url": "https://cses.fi/problemset/task/2129",
+        "score": "0.910",
+        "code": "4EAE",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Distinct Routes II",
+        "url": "https://cses.fi/problemset/task/2130",
+        "score": "0.843",
+        "code": "8809",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  {
+    "title": "Additional Problems",
+    "problems": [
+      {
+        "title": "Shortest Subsequence",
+        "url": "https://cses.fi/problemset/task/1087",
+        "score": "0.772",
+        "code": "536B",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Bits",
+        "url": "https://cses.fi/problemset/task/1146",
+        "score": "0.769",
+        "code": "9E9F",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Swap Game",
+        "url": "https://cses.fi/problemset/task/1670",
+        "score": "0.771",
+        "code": "782F",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Prüfer Code",
+        "url": "https://cses.fi/problemset/task/1134",
+        "score": "0.941",
+        "code": "CA8B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Acyclic Graph Edges",
+        "url": "https://cses.fi/problemset/task/1756",
+        "score": "0.938",
+        "code": "AE51",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Strongly Connected Edges",
+        "url": "https://cses.fi/problemset/task/2177",
+        "score": "0.906",
+        "code": "8B70",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Even Outdegree Edges",
+        "url": "https://cses.fi/problemset/task/2179",
+        "score": "0.855",
+        "code": "8CF8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Multiplication Table",
+        "url": "https://cses.fi/problemset/task/2422",
+        "score": "0.884",
+        "code": "1C3B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Advertisement",
+        "url": "https://cses.fi/problemset/task/1142",
+        "score": "0.931",
+        "code": "E175",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Special Substrings",
+        "url": "https://cses.fi/problemset/task/2186",
+        "score": "0.912",
+        "code": "050C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Permutation Inversions",
+        "url": "https://cses.fi/problemset/task/2229",
+        "score": "0.905",
+        "code": "BAEC",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Maximum Xor Subarray",
+        "url": "https://cses.fi/problemset/task/1655",
+        "score": "0.915",
+        "code": "4860",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Movie Festival Queries",
+        "url": "https://cses.fi/problemset/task/1664",
+        "score": "0.879",
+        "code": "2778",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Chess Tournament",
+        "url": "https://cses.fi/problemset/task/1697",
+        "score": "0.875",
+        "code": "50CD",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Tree Traversals",
+        "url": "https://cses.fi/problemset/task/1702",
+        "score": "0.904",
+        "code": "A232",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Network Renovation",
+        "url": "https://cses.fi/problemset/task/1704",
+        "score": "0.743",
+        "code": "39DF",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Graph Girth",
+        "url": "https://cses.fi/problemset/task/1707",
+        "score": "0.846",
+        "code": "3AC7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Intersection Points",
+        "url": "https://cses.fi/problemset/task/1740",
+        "score": "0.923",
+        "code": "1C90",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Inverse Inversions",
+        "url": "https://cses.fi/problemset/task/2214",
+        "score": "0.948",
+        "code": "B2EF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Monotone Subsequences",
+        "url": "https://cses.fi/problemset/task/2215",
+        "score": "0.900",
+        "code": "82CA",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "String Reorder",
+        "url": "https://cses.fi/problemset/task/1743",
+        "score": "0.898",
+        "code": "5036",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Stack Weights",
+        "url": "https://cses.fi/problemset/task/2425",
+        "score": "0.850",
+        "code": "C71F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Pyramid Array",
+        "url": "https://cses.fi/problemset/task/1747",
+        "score": "0.829",
+        "code": "6263",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Increasing Subsequence II",
+        "url": "https://cses.fi/problemset/task/1748",
+        "score": "0.929",
+        "code": "42B7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "String Removals",
+        "url": "https://cses.fi/problemset/task/1149",
+        "score": "0.911",
+        "code": "846C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Bit Inversions",
+        "url": "https://cses.fi/problemset/task/1188",
+        "score": "0.904",
+        "code": "B7F3",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Xor Pyramid",
+        "url": "https://cses.fi/problemset/task/2419",
+        "score": "0.791",
+        "code": "2B1F",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Writing Numbers",
+        "url": "https://cses.fi/problemset/task/1086",
+        "score": "0.918",
+        "code": "1DE7",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "String Transform",
+        "url": "https://cses.fi/problemset/task/1113",
+        "score": "0.806",
+        "code": "2575",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Letter Pair Move Game",
+        "url": "https://cses.fi/problemset/task/2427",
+        "score": "0.675",
+        "code": "C966",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Maximum Building I",
+        "url": "https://cses.fi/problemset/task/1147",
+        "score": "0.960",
+        "code": "70B9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Sorting Methods",
+        "url": "https://cses.fi/problemset/task/1162",
+        "score": "0.920",
+        "code": "028C",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Cyclic Array",
+        "url": "https://cses.fi/problemset/task/1191",
+        "score": "0.857",
+        "code": "FDA5",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "List of Sums",
+        "url": "https://cses.fi/problemset/task/2414",
+        "score": "0.767",
+        "code": "BB60",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Increasing Array II",
+        "url": "https://cses.fi/problemset/task/2132",
+        "score": "0.878",
+        "code": "EB06",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Food Division",
+        "url": "https://cses.fi/problemset/task/1189",
+        "score": "0.835",
+        "code": "104A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Bit Problem",
+        "url": "https://cses.fi/problemset/task/1654",
+        "score": "0.920",
+        "code": "0F3A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Swap Round Sorting",
+        "url": "https://cses.fi/problemset/task/1698",
+        "score": "0.783",
+        "code": "2E0C",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Binary Subsequences",
+        "url": "https://cses.fi/problemset/task/2430",
+        "score": "0.625",
+        "code": "BA86",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Tree Isomorphism I",
+        "url": "https://cses.fi/problemset/task/1700",
+        "score": "0.849",
+        "code": "44A9",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Counting Sequences",
+        "url": "https://cses.fi/problemset/task/2228",
+        "score": "0.926",
+        "code": "1FE1",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Critical Cities",
+        "url": "https://cses.fi/problemset/task/1703",
+        "score": "0.638",
+        "code": "664B",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "School Excursion",
+        "url": "https://cses.fi/problemset/task/1706",
+        "score": "0.941",
+        "code": "A34F",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coin Grid",
+        "url": "https://cses.fi/problemset/task/1709",
+        "score": "0.848",
+        "code": "415A",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Robot Path",
+        "url": "https://cses.fi/problemset/task/1742",
+        "score": "0.569",
+        "code": "853A",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Programmers and Artists",
+        "url": "https://cses.fi/problemset/task/2426",
+        "score": "0.799",
+        "code": "89F9",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Course Schedule II",
+        "url": "https://cses.fi/problemset/task/1757",
+        "score": "0.706",
+        "code": "6F18",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Removing Digits II",
+        "url": "https://cses.fi/problemset/task/2174",
+        "score": "0.484",
+        "code": "3FD6",
+        "difficulty": "HARD"
+      },
+      {
+        "title": "Coin Arrangement",
+        "url": "https://cses.fi/problemset/task/2180",
+        "score": "0.761",
+        "code": "43C6",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Bishops",
+        "url": "https://cses.fi/problemset/task/2176",
+        "score": "0.886",
+        "code": "AECF",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grid Puzzle I",
+        "url": "https://cses.fi/problemset/task/2432",
+        "score": "0.877",
+        "code": "BF9E",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grid Puzzle II",
+        "url": "https://cses.fi/problemset/task/2131",
+        "score": "0.881",
+        "code": "5F6B",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Empty String",
+        "url": "https://cses.fi/problemset/task/1080",
+        "score": "0.831",
+        "code": "D915",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grid Paths",
+        "url": "https://cses.fi/problemset/task/1078",
+        "score": "0.796",
+        "code": "A029",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Bit Substrings",
+        "url": "https://cses.fi/problemset/task/2115",
+        "score": "0.777",
+        "code": "A1E7",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Reversal Sorting",
+        "url": "https://cses.fi/problemset/task/2075",
+        "score": "0.804",
+        "code": "31C0",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Counting Reorders",
+        "url": "https://cses.fi/problemset/task/2421",
+        "score": "0.660",
+        "code": "2366",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Book Shop II",
+        "url": "https://cses.fi/problemset/task/1159",
+        "score": "0.874",
+        "code": "A049",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Network Breakdown",
+        "url": "https://cses.fi/problemset/task/1677",
+        "score": "0.944",
+        "code": "9D57",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Visiting Cities",
+        "url": "https://cses.fi/problemset/task/1203",
+        "score": "0.770",
+        "code": "BA93",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Missing Coin Sum Queries",
+        "url": "https://cses.fi/problemset/task/2184",
+        "score": "0.749",
+        "code": "7AF5",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Number Grid",
+        "url": "https://cses.fi/problemset/task/1157",
+        "score": "0.831",
+        "code": "C415",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Maximum Building II",
+        "url": "https://cses.fi/problemset/task/1148",
+        "score": "0.815",
+        "code": "3145",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Filling Trominos",
+        "url": "https://cses.fi/problemset/task/2423",
+        "score": "0.603",
+        "code": "64E0",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Stick Divisions",
+        "url": "https://cses.fi/problemset/task/1161",
+        "score": "0.838",
+        "code": "B0D8",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Coding Company",
+        "url": "https://cses.fi/problemset/task/1665",
+        "score": "0.784",
+        "code": "F01A",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Flight Route Requests",
+        "url": "https://cses.fi/problemset/task/1699",
+        "score": "0.833",
+        "code": "BAD1",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Two Stacks Sorting",
+        "url": "https://cses.fi/problemset/task/2402",
+        "score": "0.245",
+        "code": "158A",
+        "difficulty": "HARD"
+      },
+      {
+        "title": "Tree Isomorphism II",
+        "url": "https://cses.fi/problemset/task/1701",
+        "score": "0.877",
+        "code": "47C0",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Forbidden Cities",
+        "url": "https://cses.fi/problemset/task/1705",
+        "score": "0.769",
+        "code": "F769",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Area of Rectangles",
+        "url": "https://cses.fi/problemset/task/1741",
+        "score": "0.877",
+        "code": "AA84",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Grid Completion",
+        "url": "https://cses.fi/problemset/task/2429",
+        "score": "0.713",
+        "code": "373F",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Creating Offices",
+        "url": "https://cses.fi/problemset/task/1752",
+        "score": "0.746",
+        "code": "20CA",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "Permutations II",
+        "url": "https://cses.fi/problemset/task/1075",
+        "score": "0.879",
+        "code": "9778",
+        "difficulty": "EASY"
+      },
+      {
+        "title": "Functional Graph Distribution",
+        "url": "https://cses.fi/problemset/task/2415",
+        "score": "0.800",
+        "code": "E814",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "title": "New Flight Routes",
+        "url": "https://cses.fi/problemset/task/1685",
+        "score": "0.464",
+        "code": "080C",
+        "difficulty": "HARD"
+      },
+      {
+        "title": "Grid Path Construction",
+        "url": "https://cses.fi/problemset/task/2418",
+        "score": "0.305",
+        "code": "855A",
+        "difficulty": "HARD"
+      }
+    ]
+  }
+]
